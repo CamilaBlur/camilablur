@@ -10244,7 +10244,7 @@ bkL:function bkL(){},
 bjS:function bjS(a,b){this.a=a
 this.b=b},
 I5(a,b,c){var s=t.N,r=A.aq(["snapshot",A.fC(a),"extras",b],s,t.a),q=Date.now()
-return new Uint8Array(A.by(B.c2.c6(B.av.f2(A.aq(["format","blur-finance-backup","formatVersion",1,"appVersion","1.2.9+2020","createdAt",new A.ag(q,0,!1).Xh().eW(),"owner",c,"payload",r,"sha256",A.bjk(B.m5.c6(B.c2.c6(B.av.f2(r,null))).a)],s,t.K),null))))},
+return new Uint8Array(A.by(B.c2.c6(B.av.f2(A.aq(["format","blur-finance-backup","formatVersion",1,"appVersion","1.2.10+2021","createdAt",new A.ag(q,0,!1).Xh().eW(),"owner",c,"payload",r,"sha256",A.bjk(B.m5.c6(B.c2.c6(B.av.f2(r,null))).a)],s,t.K),null))))},
 Xc(a8,a9){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6=null,a7="categoryIcons"
 if(a8.length>20971520)throw A.h(B.ts)
 try{e=t.a
@@ -58934,7 +58934,7 @@ r.$flags&2&&A.j(r,11)
 r.setUint32(0,0,!1)
 q=4-s
 p=A.br(Math.pow(256,s))
-for(o=a-1,n=(a&o)===0;;){crypto.getRandomValues(J.cK(B.bd.gah(r),q,s))
+for(o=a-1,n=(a&o)>>>0===0;;){crypto.getRandomValues(J.cK(B.bd.gah(r),q,s))
 m=r.getUint32(0,!1)
 if(n)return(m&o)>>>0
 l=m%a
@@ -63802,7 +63802,7 @@ o=p.b.$0().eW()
 s=p.f
 r=c==null?null:c.k(0)
 if(r==null)r=""
-q=A.bs_(o+" \xb7 1.2.9+2020\nEtapa: "+s+"\n"+b+"\n"+r+"\n\xdaltimas etapas:\n"+B.f.b4(p.e,"\n"))
+q=A.bs_(o+" \xb7 1.2.10+2021\nEtapa: "+s+"\n"+b+"\n"+r+"\n\xdaltimas etapas:\n"+B.f.b4(p.e,"\n"))
 r=p.c.c_(new A.anu(p,a,q,d),t.P).ft(new A.anv())
 p.c=r
 return p.c=r.i1(new A.anw(p))},
@@ -63855,7 +63855,7 @@ k=n.b.$0().eW()
 h=n.f
 e=i.length===0?"Nenhum erro Dart registrado.":B.f.b4(i,"\n\n")
 d=f.length===0?"Nenhum aviso registrado.":f
-q="Blur Finance 1.2.9+2020\nGerado: "+k+"\nEtapa atual: "+h+"\n\nFalhas Dart:\n"+e+"\n\nAvisos de mem\xf3ria (n\xe3o comprovam encerramento):\n"+d+"\n\nSess\xe3o atual:\n"+B.f.b4(n.e,"\n")
+q="Blur Finance 1.2.10+2021\nGerado: "+k+"\nEtapa atual: "+h+"\n\nFalhas Dart:\n"+e+"\n\nAvisos de mem\xf3ria (n\xe3o comprovam encerramento):\n"+d+"\n\nSess\xe3o atual:\n"+B.f.b4(n.e,"\n")
 s=1
 break
 case 1:return A.v(q,r)
@@ -64469,7 +64469,9 @@ b5=t.P
 case 7:b7=h
 a7=A.ia(b7,0,A.l8(350,"count",a1),A.D(b7).c).fU(0)
 a8=J.cD(h)<=350
-a9=""+1000*Date.now()+"-"+$.bnp().DK(0)
+b7=Date.now()
+c0=$.bnp()
+a9=""+1000*b7+"-"+c0.DK(4294967296)
 s=10
 return A.m(b8.Mu(new A.ar9(b3,m,c7,a7,a8,i,a9),b5),$async$pN)
 case 10:a6=a9
@@ -67982,7 +67984,7 @@ l=q.as
 q=q.x.length
 k=A.bpp(r.d,new A.aLS(r),q+1,h,new A.aLT(r),B.vh)
 j=r.e
-q=A.b([p,B.J,new A.abv(n,m,l,h),B.d6,new A.av(h,150,new A.dJ(B.c0,h,B.bx,B.U,A.b([k,A.bzG(B.c9,j>0,B.kc,new A.aLU(r)),A.bzG(B.dF,j<q,B.f6,new A.aLV(r))],o),h),B.bix),B.ay,new A.I9(r.a.x.length+1,r.e,h),B.d6,A.kH(new A.aLW(i.r,i.w,i.x,i.y)),B.jj,B.bev],o)
+q=A.b([p,B.J,new A.abv(n,m,l,h),B.d6,new A.av(h,150,new A.dJ(B.c0,h,B.bx,B.U,A.b([k,A.bzG(B.c9,j>0,B.kc,new A.aLU(r)),A.bzG(B.dF,j<q,B.f6,new A.aLV(r))],o),h),B.bix),B.ay,new A.I9(r.a.x.length+1,r.e,h),B.d6,A.kH(new A.aLW(i.r,i.w,i.x,i.y)),B.jj,B.bew],o)
 p=r.r
 if(p.a!==0||r.x.a!==0||r.w.a!==0||r.f.a!==0){o=A.b([],o)
 for(p=A.cI(p,p.r,A.l(p).c),n=p.$ti.c;p.p();){m=p.d
@@ -68030,7 +68032,7 @@ for(o=p.d,n=o.length,j=0;j<o.length;o.length===n||(0,A.E)(o),++j){h=o[j]
 l.l(0,h,h)}d=A.b([B.a2Q,B.a2N,d,A.C3("tags","Tags",l,!0),B.a2R],t.mF)
 o=A.b([],t.n)
 e.a.toString
-o.push(A.cT(B.beA,null,null,new A.aLN(e,f),null,null))
+o.push(A.cT(B.beB,null,null,new A.aLN(e,f),null,null))
 e.a.toString
 o.push(A.cT(B.bgp,null,null,new A.aLO(e,f),null,null))
 s=3
@@ -68319,18 +68321,18 @@ if(!q.a.as)B.f.E(s,A.b([B.ay,A.z("Para receber os dados do celular, sincronize p
 o.push(A.jJ(new A.ai(B.cr,A.ah(s,B.a1,p,B.w,B.C),p),p))
 o.push(B.aU)
 s=q.a
-if(!s.as)o.push(A.pI(B.a63,B.bfZ,q.d||s.Q==null?p:new A.aSA(q),p))
+if(!s.as)o.push(A.pI(B.a63,B.bg_,q.d||s.Q==null?p:new A.aSA(q),p))
 o.push(B.J)
 if(!q.d){s=q.a.at
 s=J.d(s==null?p:s.$0(),!1)}else s=!0
-o.push(A.iy(B.AW,B.bf5,s?p:q.gaqJ(),p))
+o.push(A.iy(B.AW,B.bf6,s?p:q.gaqJ(),p))
 if(!q.a.as)B.f.E(o,A.b([B.J,A.cT(B.bdu,p,p,q.d?p:q.gaLy(),p,p)],n))
-if(q.a.ay!=null)o.push(A.cT(B.beH,p,p,q.d?p:new A.aSB(q),p,p))
+if(q.a.ay!=null)o.push(A.cT(B.beI,p,p,q.d?p:new A.aSB(q),p,p))
 if(q.d)B.f.E(o,A.b([B.J,B.kq],n))
 s=q.e
 if(s!=null)B.f.E(o,A.b([B.J,A.z(s,p,p,p,p,p,p,p,p)],n))
 o.push(B.lp)
-o.push(A.z("Blur Finance 1.2.9+2020",p,p,p,p,A.i(a).ok.Q,p,p,p))
+o.push(A.z("Blur Finance 1.2.10+2021",p,p,p,p,A.i(a).ok.Q,p,p,p))
 return A.k0(p,p,new A.jH(A.de(!0,A.ek(new A.cU(B.xM,A.ly(o,B.cr,p,p,!1),p),p,p),!0,!0,B.ex,!0,!0),p),p,p,p)}}
 A.aSo.prototype={
 $0(){this.a.e=null},
@@ -68462,8 +68464,8 @@ A.aS9.prototype={
 $0(){return this.a.d=!1},
 $S:0}
 A.aSa.prototype={
-$1(a){var s=null,r=t.n,q=A.eR(A.ah(A.b([this.a.aGv(this.b),B.aU,B.bfd],r),B.a1,s,B.w,B.an),s,s,s,s,s,B.ao)
-return A.j5(A.b([A.cT(B.cJ,s,s,new A.aS6(a),s,s),A.cT(B.beZ,s,s,new A.aS7(a),s,s),A.eT(B.bg3,new A.aS8(a),s)],r),s,q,s,B.bfs)},
+$1(a){var s=null,r=t.n,q=A.eR(A.ah(A.b([this.a.aGv(this.b),B.aU,B.bfe],r),B.a1,s,B.w,B.an),s,s,s,s,s,B.ao)
+return A.j5(A.b([A.cT(B.cJ,s,s,new A.aS6(a),s,s),A.cT(B.bf_,s,s,new A.aS7(a),s,s),A.eT(B.bg4,new A.aS8(a),s)],r),s,q,s,B.bft)},
 $S:53}
 A.aS6.prototype={
 $0(){A.ay(this.a,!1).bx(null)
@@ -68487,7 +68489,7 @@ s.e="Backup importado neste aparelho. "+A.bs3(s.a.FR())+"."},
 $S:0}
 A.aSd.prototype={
 $1(a){var s=null
-return A.j5(A.b([A.cT(B.bfx,s,s,new A.aS4(a),s,s),A.eT(B.bfC,new A.aS5(a),s)],t.n),s,B.bdq,s,B.be8)},
+return A.j5(A.b([A.cT(B.bfy,s,s,new A.aS4(a),s,s),A.eT(B.bfD,new A.aS5(a),s)],t.n),s,B.bdq,s,B.be8)},
 $S:53}
 A.aS4.prototype={
 $0(){A.ay(this.a,!1).bx(!1)
@@ -68528,7 +68530,7 @@ $0(){return this.a.d=!1},
 $S:0}
 A.aSs.prototype={
 $1(a){var s=null
-return A.j5(A.b([A.cT(B.cJ,s,s,new A.aSp(a),s,s),A.eT(B.pQ,new A.aSq(a),s)],t.n),s,B.bfL,s,B.bf4)},
+return A.j5(A.b([A.cT(B.cJ,s,s,new A.aSp(a),s,s),A.eT(B.pQ,new A.aSq(a),s)],t.n),s,B.bfM,s,B.bf5)},
 $S:53}
 A.aSp.prototype={
 $0(){A.ay(this.a,!1).bx(!1)
@@ -68977,7 +68979,7 @@ r=A.c6(q.a(A.i(a).c.h(0,A.I(r))).r,1)
 q=s.d
 n=t.n
 n=A.b([new A.kp(s.c,s.f,f,f),B.J,A.aU(f,A.ah(A.b([A.z("Gastos em "+B.p.bv(B.l.k(A.X(q)),2,"0")+"/"+A.W(q),f,f,f,f,B.dU,f,f,f),B.ay,A.z(A.cC(g.b),f,f,f,f,B.b96,f,f,f)],n),B.a1,f,B.w,B.C),B.G,f,f,new A.aI(p,f,r,o,f,f,B.W),f,f,f,f,B.bq,f,f,1/0),B.J],n)
-if(g.c.length===0)n.push(B.bex)
+if(g.c.length===0)n.push(B.bey)
 return A.ah(n,B.a1,f,B.w,B.C)}m=g.c[b-1]
 s=t.W
 r=t.I
@@ -69027,10 +69029,10 @@ break
 case 5:return A.v(null,r)
 case 1:return A.u(p.at(-1),r)}})
 return A.w($async$Hr,r)},
-B(a){var s,r=this,q=null,p=A.btw(q,q,q,q,q,q,q,q,B.bfv),o=A.z("Entre na mesma conta do celular",q,q,q,q,A.i(a).ok.r,q,q,q),n=t.n
-o=A.b([B.a6R,B.jj,o,B.J,B.be3,B.J,B.bfU,B.lp,A.pI(B.Ba,B.bgl,r.d||!r.a.c?q:r.gaDb(),q)],n)
+B(a){var s,r=this,q=null,p=A.btw(q,q,q,q,q,q,q,q,B.bfw),o=A.z("Entre na mesma conta do celular",q,q,q,q,A.i(a).ok.r,q,q,q),n=t.n
+o=A.b([B.a6R,B.jj,o,B.J,B.be3,B.J,B.bfV,B.lp,A.pI(B.Ba,B.bgl,r.d||!r.a.c?q:r.gaDb(),q)],n)
 if(r.d)B.f.E(o,A.b([B.aU,B.kq],n))
-if(!r.a.c)B.f.E(o,A.b([B.aU,B.bfk],n))
+if(!r.a.c)B.f.E(o,A.b([B.aU,B.bfl],n))
 s=r.e
 if(s!=null)B.f.E(o,A.b([B.aU,A.z(s,q,q,q,s,q,q,q,q)],n))
 return A.k0(p,q,A.de(!0,A.ly(o,B.aP,q,q,!1),!0,!0,B.ex,!0,!0),q,q,q)}}
@@ -69134,32 +69136,32 @@ case 6:case 1:return A.v(q,r)
 case 2:return A.u(o.at(-1),r)}})
 return A.w($async$rB,r)},
 B(a){var s,r,q,p,o,n=this,m=null,l=n.f,k=t.n,j=A.b([A.z(n.a.d,m,m,m,m,m,m,m,m),B.J],k)
-if(n.w)B.f.E(j,A.b([B.a6m,B.J,A.z("Sincronizado com a nuvem",m,m,m,m,B.dU,m,m,m),B.ay,B.bfN],k))
+if(n.w)B.f.E(j,A.b([B.a6m,B.J,A.z("Sincronizado com a nuvem",m,m,m,m,B.dU,m,m,m),B.ay,B.bfO],k))
 else{s=A.b([A.z("Escolha entre este navegador e a nuvem.",m,m,m,m,B.dU,m,m,m),B.ay,B.bgo],k)
-B.f.E(s,A.b([B.ay,B.beF],k))
+B.f.E(s,A.b([B.ay,B.beG],k))
 if(n.d!=null){r=A.b([B.J],k)
 q=n.d.f
 if(q!=null)r.push(A.z("Nuvem: "+n.asG(q),m,m,m,m,m,m,m,m))
 B.f.E(r,n.asF(n.a.e,n.d.b))
-B.f.E(s,r)}s.push(A.k7(B.AZ,B.beR,n.f?m:n.gasH(),m))
+B.f.E(s,r)}s.push(A.k7(B.AZ,B.beS,n.f?m:n.gasH(),m))
 B.f.E(j,s)}j=A.aZ(A.ly(j,B.a1T,m,m,!1),1)
 s=A.b4(a,B.bM,t.w).w
 r=A.b([],k)
 q=n.e
 if(q!=null)r.push(A.z(q,m,m,m,m,A.ar(m,m,A.i(a).ax.fy,m,m,m,m,m,m,m,m,m,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m,m))
 if(n.f)B.f.E(r,A.b([A.z(n.x,m,m,m,m,m,m,m,m),B.kq],k))
-if(n.w)r.push(A.eT(B.ben,new A.aYf(a),m))
+if(n.w)r.push(A.eT(B.beo,new A.aYf(a),m))
 else if(n.d!=null){q=n.r
 p=n.f
-o=A.am_(B.a3,m,p?m:new A.aYg(n),B.bfS,q)
-o=A.b([o,A.pI(B.a6y,B.bf2,p||!q?m:n.gaJ2(),m)],k)
+o=A.am_(B.a3,m,p?m:new A.aYg(n),B.bfT,q)
+o=A.b([o,A.pI(B.a6y,B.bf3,p||!q?m:n.gaJ2(),m)],k)
 n.a.toString
 o.push(A.iy(B.a6d,B.be7,n.f||!n.r?m:new A.aYh(n),m))
 B.f.E(r,o)}return A.qn(!l,A.k0(m,m,new A.jH(A.dz(!1,B.aa,!0,m,A.de(!0,A.ek(new A.cU(B.xM,A.ah(A.b([new A.ai(B.cr,new A.kp("Sincronizar dados",new A.aYi(n,a),m,m),m),j,new A.e8(0,B.br,new A.cU(new A.ae(0,1/0,0,s.a.b*0.5),A.eR(A.ah(r,B.bV,m,B.w,B.an),m,m,m,B.a1U,m,B.ao),m),m)],k),B.F,m,B.w,B.C),m),m,m),!0,!0,B.a3,!0,!0),B.G,B.X,0,m,m,m,m,m,B.cg),m),m,m,m),m,t.z)},
 asG(a){var s=a.MC(),r=new A.aY5()
 return A.o(r.$1(A.az(s)))+"/"+A.o(r.$1(A.X(s)))+"/"+A.W(s)+" \xe0s "+A.o(r.$1(A.qo(s)))+":"+A.o(r.$1(A.oA(s)))},
 asF(a7,a8){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a=null,a0=A.fC(a7),a1=a8==null,a2=a1?A.A(t.N,t.z):A.fC(a8),a3=t.n,a4=A.b([],a3),a5=A.aio(a7.e,a7.r),a6=a1?B.uH:A.aio(a8.e,a8.r)
-a1=A.b([B.beX],a3)
+a1=A.b([B.beY],a3)
 for(s=a5.length,r=0;r<a5.length;a5.length===s||(0,A.E)(a5),++r){q=a5[r]
 p=A.z(q.b+" \xb7 neste aparelho: "+A.cC(q.c),a,a,a,a,a,a,a,a)
 B.f.E(a1,A.b([B.ay,p,A.z(B.f.bV(a6,new A.aY0(q))?"Na nuvem: "+A.cC(B.f.mY(a6,new A.aY1(q)).gJp()):"Ainda n\xe3o existe na nuvem",a,a,a,a,a,a,a,a)],a3))}for(s=B.f.gO(a6),p=new A.fz(s,new A.aY2(a5));p.p();){q=s.gN()
@@ -69359,7 +69361,7 @@ for(e=new A.ca(e,e.$ti.i("ca<1,2>")).gO(0),l=t.r;e.p();){k=e.d
 m.push(new A.bz(k.a,A.z(k.b,h,h,h,h,h,h,h,h),B.aL,h,l))}e=i.w?h:new A.aZC(i)
 f=A.dj(B.a7v,n,!1,m,new A.bJ(r,t.lP),e,f)
 e=A.z(i.v5(i.f),h,h,h,h,h,h,h,h)
-e=i.a27(i.w?h:new A.aZD(i,a),e,B.bg7,B.kf)
+e=i.a27(i.w?h:new A.aZD(i,a),e,B.bg8,B.kf)
 r=A.z(i.v5(i.r),h,h,h,h,h,h,h,h)
 n=i.w
 r=i.a27(n?h:new A.aZE(i,a),r,B.TC,B.kf)
@@ -69714,7 +69716,7 @@ case 6:case 5:case 1:return A.v(q,r)}})
 return A.w($async$AJ,r)},
 B(a){var s,r,q=this,p=null,o=q.AE(q.gh_(),q.f),n=t.n,m=A.b([A.aV(A.b([A.ck(p,p,p,B.f8,p,p,p,q.a.z,p,p,p,"Voltar",p),A.aZ(A.z(q.ga8l(),p,p,p,p,B.baw,p,p,p),1),A.ck(p,p,p,B.a6J,p,B.biB,p,q.gawi(),p,p,p,"Filtros",p)],n),B.F,B.w,B.C,0),B.aU,new A.nI(q.ga5o(),new A.b2l(q),new A.b2m(q),p)],n)
 if(q.f||q.x!=="none"){s=A.b([],n)
-if(q.f)s.push(A.xf(B.beK,new A.b2n(q),p))
+if(q.f)s.push(A.xf(B.beL,new A.b2n(q),p))
 r=q.x
 if(r!=="none")s.push(A.xf(A.z(r==="year"?"Comparando ano anterior":"Comparando per\xedodo anterior",p,p,p,p,p,p,p,p),new A.b2o(q),p))
 m.push(new A.ai(B.zR,A.he(B.bE,s,B.c_,0,6),p))}if(q.r)m.push(B.kq)
@@ -69906,7 +69908,7 @@ s=A.i(e).ax.a===B.P?s:B.d1}else{e.toString
 s=j.a(A.i(e).c.h(0,A.I(k))).Q
 s=A.i(e).ax.a===B.P?s:B.h7}s=A.z(h+f,a,a,a,a,A.ar(a,a,s,a,a,a,a,a,a,a,a,26,a,a,B.ax,a,a,!0,a,a,a,a,a,a,a,a),a,a,a)
 a1=A.b([s,A.z(a2>0?A.bBc(o,a2)+" sobre o saldo inicial":"Sem saldo inicial para comparar percentualmente",a,a,a,a,B.eL,a,a,a),B.aU,b.Hk("Saldo antes do per\xedodo",a2),A.aE7(!1,"changes",A.b([new A.aj("Aportes registrados",q.f),new A.aj("Resgates e vendas",-q.r),new A.aj(a0,i),new A.aj("Ajustes de saldo",q.w)],t.Sc),r,new A.b29(b,q),!1),B.ii,b.Hk("Saldo no per\xedodo",a1)],g)
-if(q.y.length!==0)a1.push(A.k7(B.a6c,B.bf3,new A.b2a(b,q),a))
+if(q.y.length!==0)a1.push(A.k7(B.a6c,B.bf4,new A.b2a(b,q),a))
 if(q.x){a2=b.c
 a2.toString
 a1.push(new A.ai(B.zM,A.z("H\xe1 saldos ou altera\xe7\xf5es antigas sem classifica\xe7\xe3o. A valoriza\xe7\xe3o hist\xf3rica n\xe3o pode ser calculada por completo; os valores dispon\xedveis foram preservados.",B.bit,a,a,a,A.ar(a,a,A.ba(a2,B.Zi),a,a,a,a,a,a,a,a,12,a,a,a,a,1.5,!0,a,a,a,a,a,a,a,a),a,a,a),a))}a3.push(b.r9("O que mudou no patrim\xf4nio",a1))
@@ -69972,7 +69974,7 @@ break A}r=b.y
 q=A.D(r).i("C<1>")
 p=A.p(new A.C(r,new A.b2i(s),q),q.i("k.E"))
 s=A.b([],t.n)
-if(p.length===0)s.push(B.bfj)
+if(p.length===0)s.push(B.bfk)
 for(r=p.length,o=0;o<p.length;p.length===r||(0,A.E)(p),++o){n=p[o]
 q=n.d
 m=B.p.bv(B.l.k(A.az(q)),2,"0")
@@ -70600,7 +70602,7 @@ l.push(new A.bz(f,A.z(f,d,d,d,d,d,d,d,d),B.aL,d,h))}j=t.N
 l=A.dj(B.a7x,m,!1,l,d,new A.b5o(n),j)
 j=A.dj(B.a7C,n.b,!1,B.aW3,d,new A.b5p(n),j)
 m=n.c
-return new A.ai(new A.ac(0,0,0,b.f.d),new A.cU(new A.ae(0,1/0,0,c.a.b*0.85),A.eR(A.boK(d,A.ah(A.b([B.bf7,B.aU,q,B.J,o,B.J,l,B.J,j,A.fh(!1,d,d,d,!0,d,d,d,!0,d,d,d,d,d,d,new A.b5q(n,a,a0),!1,d,d,d,d,d,A.z(""+A.az(m)+"/"+A.X(m)+"/"+A.W(m),d,d,d,d,d,d,d,d),d,B.beu,d,B.kf,d),B.bdS,B.aU,A.eT(B.bf0,new A.b5r(n,k,s,r,p,a),d)],t.n),B.bV,d,B.w,B.an),s),d,d,d,B.bq,d,B.ao),d),d)},
+return new A.ai(new A.ac(0,0,0,b.f.d),new A.cU(new A.ae(0,1/0,0,c.a.b*0.85),A.eR(A.boK(d,A.ah(A.b([B.bf8,B.aU,q,B.J,o,B.J,l,B.J,j,A.fh(!1,d,d,d,!0,d,d,d,!0,d,d,d,d,d,d,new A.b5q(n,a,a0),!1,d,d,d,d,d,A.z(""+A.az(m)+"/"+A.X(m)+"/"+A.W(m),d,d,d,d,d,d,d,d),d,B.bev,d,B.kf,d),B.bdS,B.aU,A.eT(B.bf1,new A.b5r(n,k,s,r,p,a),d)],t.n),B.bV,d,B.w,B.an),s),d,d,d,B.bq,d,B.ao),d),d)},
 $S:244}
 A.b5m.prototype={
 $1(a){var s=A.c4("^[A-Z]{4}\\d{1,2}$",!0,!1),r=B.p.bg(a==null?"":a)
@@ -70956,7 +70958,7 @@ a3.push(new A.ai(B.zM,A.z(s,B.biv,a1,a1,a1,a1,a1,a1,a1),a1))
 a3.push(B.J)
 a3.push(new A.a7N(d+c,n.length+j.length,a0.gaEV(),a1))
 a3.push(B.J)
-a3.push(B.bfy)
+a3.push(B.bfz)
 a3.push(B.J)
 if(h.a===0)a3.push(B.x4)
 else{s=A.D(g).i("F<1,zV>")
@@ -71118,7 +71120,7 @@ $2(a,b){return a+b.y},
 $S:79}
 A.a7N.prototype={
 B(a){var s=null,r=A.ax(18),q=t.W,p=t.I,o=A.i(a).ax.a===B.P?p.a(A.i(a).c.h(0,A.I(q))).d:p.a(A.i(a).c.h(0,A.I(q))).c,n=A.ax(18),m=A.c6(B.a_3,1),l=t.n
-return A.cv(!1,r,!0,A.aU(s,A.aV(A.b([A.nN(A.ba(a,B.dK).a6(0.16),A.bY(B.fB,A.ba(a,B.dK),s,s),s),B.c4,A.aZ(A.ah(A.b([B.beI,B.cH,A.z(""+this.d+" aplica\xe7\xe3o(\xf5es) separadas dos investimentos",s,s,s,s,A.ar(s,s,p.a(A.i(a).c.h(0,A.I(q))).f,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)],l),B.a1,s,B.w,B.C),1),A.z(A.cC(this.c),s,s,s,s,B.bs,s,s,s),B.ji,B.iI],l),B.F,B.w,B.C,0),B.G,s,s,new A.aI(o,s,m,n,s,s,B.W),s,s,s,s,B.cr,s,s,1/0),s,!0,s,s,s,s,s,s,s,s,s,s,this.e,s,s,s,s,s,s,s)}}
+return A.cv(!1,r,!0,A.aU(s,A.aV(A.b([A.nN(A.ba(a,B.dK).a6(0.16),A.bY(B.fB,A.ba(a,B.dK),s,s),s),B.c4,A.aZ(A.ah(A.b([B.beJ,B.cH,A.z(""+this.d+" aplica\xe7\xe3o(\xf5es) separadas dos investimentos",s,s,s,s,A.ar(s,s,p.a(A.i(a).c.h(0,A.I(q))).f,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)],l),B.a1,s,B.w,B.C),1),A.z(A.cC(this.c),s,s,s,s,B.bs,s,s,s),B.ji,B.iI],l),B.F,B.w,B.C,0),B.G,s,s,new A.aI(o,s,m,n,s,s,B.W),s,s,s,s,B.cr,s,s,1/0),s,!0,s,s,s,s,s,s,s,s,s,s,this.e,s,s,s,s,s,s,s)}}
 A.L_.prototype={
 a0(){return new A.aaO(B.BQ)}}
 A.aaO.prototype={
@@ -71178,7 +71180,7 @@ r=A.nH(a,A.b([A.ba(a,B.dK),A.bk(4285352703)],t.d))
 q=A.ax(22)
 p=A.c6(A.bk(1441226484),1)
 o=t.n
-o=A.b([new A.kp("Cofrinhos",i,new A.L0(j,s,new A.aYs(n),m),m),B.J,A.aU(m,A.ah(A.b([A.z("Total em cofrinhos",m,m,m,m,A.ar(m,m,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.7),m,m,m,m,m,m,m,m,m,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m,m),B.ay,A.z(A.cC(l+k),m,m,m,m,B.pL,m,m,m)],o),B.a1,m,B.w,B.C),B.G,m,m,new A.aI(m,m,p,q,m,new A.fs(B.cy,B.dY,B.bR,r,m,m),B.W),m,m,m,m,B.bq,m,m,1/0),B.bn,B.bfQ,B.J],o)
+o=A.b([new A.kp("Cofrinhos",i,new A.L0(j,s,new A.aYs(n),m),m),B.J,A.aU(m,A.ah(A.b([A.z("Total em cofrinhos",m,m,m,m,A.ar(m,m,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.7),m,m,m,m,m,m,m,m,m,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m,m),B.ay,A.z(A.cC(l+k),m,m,m,m,B.pL,m,m,m)],o),B.a1,m,B.w,B.C),B.G,m,m,new A.aI(m,m,p,q,m,new A.fs(B.cy,B.dY,B.bR,r,m,m),B.W),m,m,m,m,B.bq,m,m,1/0),B.bn,B.bfR,B.J],o)
 if(n.gNp().length===0&&n.d.dU(n.a.e).length===0)o.push(B.x4)
 else{j=n.gNp()
 j=A.p(new A.F(j,new A.aYt(n),A.D(j).i("F<1,c>")),t.l7)
@@ -71266,7 +71268,7 @@ h=a0+" "+A.cC(h.a)}q.push(new A.m3("Alerta",h,n))}if(f>0)B.f.E(q,A.b([new A.m3("
 h=i.CW
 q.push(new A.m3("Banco ou corretora",h.length===0?l:h,n))
 q.push(B.ay)
-h=A.iy(B.B6,B.bf_,o.a.f,n)
+h=A.iy(B.B6,B.bf0,o.a.f,n)
 a0=A.bY(s?B.tv:B.a5u,n,n,n)
 h=A.b([h,A.iy(a0,A.z(s?"Marcar como vendido":"Restaurar investimento",n,n,n,n,n,n,n,n),new A.b4n(o,i),n)],a5)
 if(d){a0=o.a.d
@@ -71702,7 +71704,7 @@ $0(){return this.a.aK7(this.b)},
 $S:0}
 A.bal.prototype={
 $1(a){var s=null
-return A.de(!0,new A.ai(B.aP,A.ah(A.b([B.beq,B.J,A.z("O Blur Finance usa seus dados financeiros apenas para exibir e sincronizar suas informa\xe7\xf5es entre seus dispositivos. Seus dados ficam vinculados ao seu usu\xe1rio autenticado no Firebase.",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).f,s,s,s,s,s,s,s,s,s,s,s,B.ax,s,1.45,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.eT(B.bdv,new A.bak(a),s)],t.n),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
+return A.de(!0,new A.ai(B.aP,A.ah(A.b([B.ber,B.J,A.z("O Blur Finance usa seus dados financeiros apenas para exibir e sincronizar suas informa\xe7\xf5es entre seus dispositivos. Seus dados ficam vinculados ao seu usu\xe1rio autenticado no Firebase.",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).f,s,s,s,s,s,s,s,s,s,s,s,B.ax,s,1.45,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.eT(B.bdv,new A.bak(a),s)],t.n),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
 $S:41}
 A.bak.prototype={
 $0(){return A.ay(this.a,!1).bw()},
@@ -71805,7 +71807,7 @@ $0(){return A.ay(this.a,!1).Ln()},
 $S:0}
 A.aAn.prototype={
 $1(a){var s=this.a.c,r=t.N
-return A.b([A.bpD(B.bdf,!s.as,"refresh",r),A.bpD(B.bg5,s.gMP()>0,"read",r)],t.Do)},
+return A.b([A.bpD(B.bdf,!s.as,"refresh",r),A.bpD(B.bg6,s.gMP()>0,"read",r)],t.Do)},
 $S:236}
 A.aAo.prototype={
 $1(a){return this.ah6(a)},
@@ -72359,7 +72361,7 @@ p=A.ax(18)
 s=A.c6(this.d.a6(0.22),1)
 return A.aU(r,A.z(this.c,r,r,r,r,A.ar(r,r,o.f,r,r,r,r,r,r,r,r,r,r,r,B.ax,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),B.G,r,r,new A.aI(q,r,s,p,r,r,B.W),r,r,r,r,B.bq,r,r,1/0)}}
 A.adZ.prototype={
-B(a){return A.ah(A.b([B.bew,B.J,A.kH(new A.bdq(this,A.b([new A.Ab([B.bkP,"Balan\xe7o","Vis\xe3o geral das finan\xe7as",B.iD,A.bk(4285352703)]),new A.Ab([B.bkQ,"Categorias","Categorias",B.tx,A.ba(a,B.dL)]),new A.Ab([B.bkR,"Cart\xf5es","Faturas e gastos",B.f7,A.ba(a,B.h8)]),new A.Ab([B.bkS,"Investimentos","Evolu\xe7\xe3o da carteira",B.ke,A.bk(4282285566)])],t.J_)))],t.n),B.a1,null,B.w,B.C)}}
+B(a){return A.ah(A.b([B.bex,B.J,A.kH(new A.bdq(this,A.b([new A.Ab([B.bkP,"Balan\xe7o","Vis\xe3o geral das finan\xe7as",B.iD,A.bk(4285352703)]),new A.Ab([B.bkQ,"Categorias","Categorias",B.tx,A.ba(a,B.dL)]),new A.Ab([B.bkR,"Cart\xf5es","Faturas e gastos",B.f7,A.ba(a,B.h8)]),new A.Ab([B.bkS,"Investimentos","Evolu\xe7\xe3o da carteira",B.ke,A.bk(4282285566)])],t.J_)))],t.n),B.a1,null,B.w,B.C)}}
 A.bdq.prototype={
 $2(a,b){var s,r,q,p=null,o=b.b>=780,n=o?4:2
 o=o?170:p
@@ -72711,7 +72713,7 @@ return n},
 $S:230}
 A.baW.prototype={
 $1(a){var s=null,r=this.a,q=A.eR(A.bxX(r),s,s,s,s,s,B.ao)
-return A.j5(A.b([A.k7(B.a6r,B.bec,new A.baT(r,a),s),A.cT(B.beg,s,s,new A.baU(r),s,s),A.cT(B.bdm,s,s,new A.baV(a),s,s)],t.n),s,q,s,B.bg8)},
+return A.j5(A.b([A.k7(B.a6r,B.bec,new A.baT(r,a),s),A.cT(B.beg,s,s,new A.baU(r),s,s),A.cT(B.bdm,s,s,new A.baV(a),s,s)],t.n),s,q,s,B.bek)},
 $S:53}
 A.baT.prototype={
 $0(){var s=0,r=A.x(t.H),q=this,p,o
@@ -73057,7 +73059,7 @@ $S:182}
 A.bb1.prototype={
 $2(a,b){var s=this,r=null,q=A.z("Se sua conta foi criada pelo Google, essa senha vincula o e-mail ao mesmo usu\xe1rio.",r,r,r,r,A.ar(r,r,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.66),r,r,r,r,r,r,r,r,r,r,r,B.aZ,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),p=s.c,o=A.dQ(r,B.aQ,!1,r,!0,B.U,r,A.e3(),p,r,r,r,r,r,2,B.a7y,B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,r,r,r,r,1,r,r,!0,"\u2022",r,r,r,r,r,!1,r,r,!1,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.bI,r,r,r,r),n=s.d,m=A.dQ(r,B.aQ,!1,r,!0,B.U,r,A.e3(),n,r,r,r,r,r,2,B.a7F,B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,r,r,r,r,1,r,r,!0,"\u2022",r,r,r,r,r,!1,r,r,!1,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.bI,r,r,r,r),l=s.a,k=l.a
 p=k?r:new A.bb0(l,s.b,p,n,b,a)
-return A.ah(A.b([B.bel,B.ch,q,B.aU,o,B.J,m,B.bn,new A.av(1/0,r,A.eT(A.z(k?"Salvando...":"Salvar senha",r,r,r,r,r,r,r,r),p,r),r)],t.n),B.F,r,B.w,B.an)},
+return A.ah(A.b([B.bem,B.ch,q,B.aU,o,B.J,m,B.bn,new A.av(1/0,r,A.eT(A.z(k?"Salvando...":"Salvar senha",r,r,r,r,r,r,r,r),p,r),r)],t.n),B.F,r,B.w,B.an)},
 $S:37}
 A.bb0.prototype={
 $0(){var s=0,r=A.x(t.H),q,p=this,o,n,m,l
@@ -73407,7 +73409,7 @@ r=A.z("Guardado em "+r,g,g,g,g,A.ar(g,g,k.a(A.i(a).c.h(0,A.I(l))).e.a6(0.7),g,g,
 j=A.z(A.cC(s.c),g,g,g,g,B.pL,g,g,g)
 i=A.ax(999)
 s=s.gE1()
-q=A.b([p,B.J,A.aU(g,A.ah(A.b([r,B.ay,j,B.ch,A.mq(i,A.CT(k.a(A.i(a).c.h(0,A.I(l))).e.a6(0.18),k.a(A.i(a).c.h(0,A.I(l))).e,8,s),B.bB)],q),B.a1,g,B.w,B.C),B.G,g,g,new A.aI(g,g,m,n,g,new A.fs(B.cy,B.dY,B.bR,o,g,g),B.W),g,g,g,g,B.bq,g,g,g),B.bn,B.bek,B.J],q)
+q=A.b([p,B.J,A.aU(g,A.ah(A.b([r,B.ay,j,B.ch,A.mq(i,A.CT(k.a(A.i(a).c.h(0,A.I(l))).e.a6(0.18),k.a(A.i(a).c.h(0,A.I(l))).e,8,s),B.bB)],q),B.a1,g,B.w,B.C),B.G,g,g,new A.aI(g,g,m,n,g,new A.fs(B.cy,B.dY,B.bR,o,g,g),B.W),g,g,g,g,B.bq,g,g,g),B.bn,B.bel,B.J],q)
 if(f.length===0)q.push(B.bjT)
 else B.f.E(q,new A.F(f,new A.aET(h),A.D(f).i("F<1,c>")))
 return A.eR(A.ah(q,B.a1,g,B.w,B.C),g,g,g,B.e6,g,B.ao)},
@@ -73426,7 +73428,7 @@ $0(){return this.a.f.$1(this.b)},
 $S:0}
 A.aEP.prototype={
 $1(a){var s=null
-return A.de(!0,new A.ai(B.bq,A.ah(A.b([B.bdC,B.ay,A.z("A meta e o hist\xf3rico de aportes ser\xe3o removidos deste prot\xf3tipo.",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.68),s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.iy(B.fC,B.bfP,new A.aEO(this.a,a),A.tW(s,s,s,s,s,s,s,s,s,A.ba(a,B.bO),s,B.w9,s,s,s,new A.aT(A.ba(a,B.bO),1,B.Y,-1),s,s,s,s))],t.n),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
+return A.de(!0,new A.ai(B.bq,A.ah(A.b([B.bdC,B.ay,A.z("A meta e o hist\xf3rico de aportes ser\xe3o removidos deste prot\xf3tipo.",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.68),s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.iy(B.fC,B.bfQ,new A.aEO(this.a,a),A.tW(s,s,s,s,s,s,s,s,s,A.ba(a,B.bO),s,B.w9,s,s,s,new A.aT(A.ba(a,B.bO),1,B.Y,-1),s,s,s,s))],t.n),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
 $S:41}
 A.aEO.prototype={
 $0(){A.ay(this.b,!1).bw()
@@ -73556,7 +73558,7 @@ e=h.f
 s=e==null?"":e
 p=A.b([B.zz],t.FG)
 for(o=h.a.d,n=o.length,m=t.r,l=0;l<o.length;o.length===n||(0,A.E)(o),++l){k=o[l]
-p.push(new A.bz(k.a,A.z(k.b,g,g,g,g,g,g,g,g),B.aL,g,m))}if(h.f!=null&&!B.f.bV(h.a.d,new A.bfd(h)))p.push(A.fe(B.bes,h.f,t.N))
+p.push(new A.bz(k.a,A.z(k.b,g,g,g,g,g,g,g,g),B.aL,g,m))}if(h.f!=null&&!B.f.bV(h.a.d,new A.bfd(h)))p.push(A.fe(B.bet,h.f,t.N))
 o=t.N
 e=A.dj(B.a7A,s,!1,p,new A.bJ(e,t._b),new A.bfe(h),o)
 p=t.n
@@ -73575,7 +73577,7 @@ n=i.d==="monthly"?"Mensal":"Anual"
 m=i.w
 m=m==null?"Sem t\xe9rmino":""+A.az(m)+"/"+A.X(m)+"/"+A.W(m)
 e.push(A.jJ(A.fh(!1,g,g,g,!0,g,g,g,!0,g,B.a6l,g,g,g,g,new A.bfi(h,i),!1,g,g,g,g,g,A.z(o+"\n"+n+" \xb7 dia "+i.x+" \xb7 "+m,g,g,g,g,g,g,g,g),g,p,g,A.z(A.cC(i.f),g,g,g,g,g,g,g,g),g),g))}e.push(B.J)
-e.push(B.beJ)
+e.push(B.beK)
 return A.k0(g,g,new A.jH(A.de(!0,A.ly(e,B.a1P,g,g,!1),!0,!1,B.a3,!0,!0),g),g,new A.wI(B.Bb,g,g,new A.bfj(h),g,g,!0,B.UC,B.bd9,g),g)}}
 A.bfI.prototype={
 $0(){return this.a.d=this.b},
@@ -73613,10 +73615,10 @@ g=A.dj(B.a7B,k.e,!1,B.aVM,a0,new A.bfv(k),g)
 j=k.d
 f=A.b([],t.M9)
 for(e=t.kZ,b=1;b<=31;++b)f.push(new A.bz(b,A.z(""+b,a0,a0,a0,a0,a0,a0,a0,a0),B.aL,a0,e))
-p=A.b([p,B.aU,n,B.J,l,B.J,i,B.J,g,B.J,A.dj(B.a7D,j,!1,f,a0,new A.bfw(k),t.S),A.fh(!1,B.a3,a0,a0,!0,a0,a0,a0,!0,a0,a0,a0,a0,a0,a0,new A.bfx(k,a3,a4),!1,a0,a0,a0,a0,a0,A.z(h.v5(k.b),a0,a0,a0,a0,a0,a0,a0,a0),a0,B.bfa,a0,B.kf,a0),A.EE(B.a3,new A.bfy(k,a4),a0,B.bgu,k.c==null)],t.n)
+p=A.b([p,B.aU,n,B.J,l,B.J,i,B.J,g,B.J,A.dj(B.a7D,j,!1,f,a0,new A.bfw(k),t.S),A.fh(!1,B.a3,a0,a0,!0,a0,a0,a0,!0,a0,a0,a0,a0,a0,a0,new A.bfx(k,a3,a4),!1,a0,a0,a0,a0,a0,A.z(h.v5(k.b),a0,a0,a0,a0,a0,a0,a0,a0),a0,B.bfb,a0,B.kf,a0),A.EE(B.a3,new A.bfy(k,a4),a0,B.bgu,k.c==null)],t.n)
 n=k.c
 if(n!=null)p.push(A.fh(!1,B.a3,a0,a0,!0,a0,a0,a0,!0,a0,a0,a0,a0,a0,a0,new A.bfz(k,a3,a4),!1,a0,a0,a0,a0,a0,A.z(h.v5(n),a0,a0,a0,a0,a0,a0,a0,a0),a0,B.TC,a0,B.kf,a0))
-p.push(A.EE(B.a3,new A.bfA(k,a4),a0,B.beG,k.f))
+p.push(A.EE(B.a3,new A.bfA(k,a4),a0,B.beH,k.f))
 n=a.r
 p.push(A.Pa(!1,n,B.a7s,a0,a0,1000,2,a0,a0,B.bI,a0))
 p.push(B.aU)
@@ -73726,7 +73728,7 @@ return A.w($async$$0,r)},
 $S:2}
 A.bfm.prototype={
 $1(a){var s=null
-return A.j5(A.b([A.cT(B.cJ,s,s,new A.bfk(a),s,s),A.cT(B.pO,s,s,new A.bfl(a),s,s)],t.n),s,B.beM,s,B.bdG)},
+return A.j5(A.b([A.cT(B.cJ,s,s,new A.bfk(a),s,s),A.cT(B.pO,s,s,new A.bfl(a),s,s)],t.n),s,B.beN,s,B.bdG)},
 $S:53}
 A.bfk.prototype={
 $0(){A.ay(this.a,!1).bx(!1)
@@ -73981,14 +73983,14 @@ for(r=B.aZ8.gdN(),r=r.gO(r);r.p();){q=r.gN()
 s.push(A.Iu(A.z(q.b,o,o,o,o,o,o,o,o),new A.bgz(p,q),p.w===q.a))}r=p.y
 q=r?o:p.gaKS()
 s.push(A.iy(B.AW,A.z(r?"Exportando\u2026":"Exportar aprovados para Play",o,o,o,o,o,o,o,o),q,o))
-n=A.b([new A.kp("Solicita\xe7\xf5es de acesso",new A.bgA(a),n,o),B.J,A.he(B.bE,s,B.c_,8,8),A.k7(B.a6n,B.bdj,new A.bgB(p,a),o),B.J,B.beL],m)
+n=A.b([new A.kp("Solicita\xe7\xf5es de acesso",new A.bgA(a),n,o),B.J,A.he(B.bE,s,B.c_,8,8),A.k7(B.a6n,B.bdj,new A.bgB(p,a),o),B.J,B.beM],m)
 m=p.r
 if(m!=null)n.push(new A.ai(B.zN,A.z(m,o,o,o,o,A.ar(o,o,t.I.a(A.i(a).c.h(0,A.I(t.W))).Q,o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),o))
 if(p.x)n.push(B.kq)
 n.push(B.J)
 m=l.length
 n.push(A.aZ(m===0&&!p.x?B.Yx:A.a0y(o,new A.bgC(p,l),m,o,B.ao),1))
-if(p.f!=null)n.push(A.cT(B.bet,o,o,p.x?o:new A.bgD(p),o,o))
+if(p.f!=null)n.push(A.cT(B.beu,o,o,p.x?o:new A.bgD(p),o,o))
 return A.k0(o,o,new A.jH(A.de(!0,A.ek(new A.cU(B.W7,new A.ai(B.cr,A.ah(n,B.F,o,B.w,B.C),o),o),o,o),!0,!1,B.a3,!0,!0),o),o,o,o)}}
 A.bgi.prototype={
 $0(){var s=this.a
@@ -74072,7 +74074,7 @@ $0(){return this.a.z=null},
 $S:0}
 A.bgc.prototype={
 $1(a){var s=null
-return A.j5(A.b([A.cT(B.cJ,s,s,new A.bga(a),s,s),A.eT(B.TB,new A.bgb(a),s)],t.n),s,B.bdc,s,B.bfl)},
+return A.j5(A.b([A.cT(B.cJ,s,s,new A.bga(a),s,s),A.eT(B.TB,new A.bgb(a),s)],t.n),s,B.bdc,s,B.bfm)},
 $S:53}
 A.bga.prototype={
 $0(){A.ay(this.a,!1).bx(!1)
@@ -74137,10 +74139,10 @@ s=A.b([new A.av(290,o,A.ah(s,B.a1,o,B.w,B.C),o)],m)
 p=this.a
 if(p.z===n.a)s.push(B.yl)
 else{m=A.b([],m)
-if(!q)m.push(A.pI(B.tG,B.bfh,p.z==null?new A.bgu(p,n):o,o))
-if(q&&!n.f)m.push(A.iy(B.a6E,B.bfn,p.z==null?new A.bgv(p,n):o,o))
+if(!q)m.push(A.pI(B.tG,B.bfi,p.z==null?new A.bgu(p,n):o,o))
+if(q&&!n.f)m.push(A.iy(B.a6E,B.bfo,p.z==null?new A.bgv(p,n):o,o))
 if(r!=="denied"){r=p.z==null?new A.bgw(p,n):o
-m.push(A.iy(B.ki,B.bfI,r,A.tW(o,o,o,o,o,o,o,o,o,t.I.a(A.i(a).c.h(0,A.I(t.W))).Q,o,o,o,o,o,o,o,o,o,o)))}s.push(A.he(B.bE,m,B.c_,0,8))}return A.jJ(new A.ai(B.cr,A.he(B.Uf,s,B.Ug,12,16),o),o)},
+m.push(A.iy(B.ki,B.bfJ,r,A.tW(o,o,o,o,o,o,o,o,o,t.I.a(A.i(a).c.h(0,A.I(t.W))).Q,o,o,o,o,o,o,o,o,o,o)))}s.push(A.he(B.bE,m,B.c_,0,8))}return A.jJ(new A.ai(B.cr,A.he(B.Uf,s,B.Ug,12,16),o),o)},
 $S:398}
 A.bgu.prototype={
 $0(){return this.a.a6q(this.b,"approved")},
@@ -74618,7 +74620,7 @@ s.toString
 s=A.ba(s,B.bO)
 r=q.c
 r.toString
-q.mv("Salvar conta",A.b([n,B.J,l,B.ay,new A.e_(new A.aPL(o),p),B.J,A.iy(B.fC,B.bfW,new A.aPM(q,a),A.tW(p,p,p,p,p,p,p,p,p,s,p,B.lo,p,p,p,new A.aT(A.ba(r,B.bO),1,B.Y,-1),p,p,p,p))],t.n),new A.aPN(o,q,m,k,a),"Editar conta")},
+q.mv("Salvar conta",A.b([n,B.J,l,B.ay,new A.e_(new A.aPL(o),p),B.J,A.iy(B.fC,B.bfX,new A.aPM(q,a),A.tW(p,p,p,p,p,p,p,p,p,s,p,B.lo,p,p,p,new A.aT(A.ba(r,B.bO),1,B.Y,-1),p,p,p,p))],t.n),new A.aPN(o,q,m,k,a),"Editar conta")},
 aJG(){var s=this,r=null,q={},p=$.al(),o=new A.bv(B.aK,p),n=new A.bv(B.aK,p),m=new A.bv(B.aK,p),l=new A.bv(B.aK,p)
 q.a="Visa"
 p=s.a.Q
@@ -74868,7 +74870,7 @@ o=A.b([A.dQ(null,B.aQ,!1,null,!0,B.U,null,A.e3(),l,null,null,null,null,null,2,B.
 a2=p.c
 a2.toString
 s=3
-return A.m(p.S8("Salvar investimento",o,new A.aQO(a5,p,l,j,b,a,i,c,m,k,a6,d),A.k7(B.fC,B.bfq,new A.aQP(p,a6),A.kY(null,null,null,null,null,null,null,null,null,A.ba(a2,B.bO),null,null,null,null,null,null,null,null,null,null)),"Editar investimento"),$async$Bv)
+return A.m(p.S8("Salvar investimento",o,new A.aQO(a5,p,l,j,b,a,i,c,m,k,a6,d),A.k7(B.fC,B.bfr,new A.aQP(p,a6),A.kY(null,null,null,null,null,null,null,null,null,A.ba(a2,B.bO),null,null,null,null,null,null,null,null,null,null)),"Editar investimento"),$async$Bv)
 case 3:s=4
 return A.m(A.mE(B.k1,null,t.H),$async$Bv)
 case 4:for(o=[m,l,k,j,i,d,c,b,a],a3=0;a3<9;++a3){a4=o[a3]
@@ -75591,7 +75593,7 @@ k=A.p(new A.F(k,new A.aOU(a),A.D(k).i("F<1,bz<f>>")),t.r)
 k.push(B.mz)
 j=t.n
 l=A.b([r,B.J,q,B.J,o,B.J,m,B.J,A.dj(B.n0,n,!0,k,new A.bJ("category-"+n,t.O),new A.aOV(c,e,b),l),B.J,A.cv(!1,A.ax(16),!0,A.oc(f,A.z(e.kF(c.x),f,f,f,f,f,f,f,f),B.kk,!1,!1,!1,!1,f,f),f,!0,f,f,f,f,f,f,f,f,f,f,new A.aOW(c,a,b),f,f,f,f,f,f,f),B.J,e.ID(g.e)],j)
-if(!c.e){r=A.b([B.J,A.EE(B.a3,new A.aOI(c,b),B.beD,B.bg_,c.d)],j)
+if(!c.e){r=A.b([B.J,A.EE(B.a3,new A.aOI(c,b),B.beE,B.bg0,c.d)],j)
 if(c.d){q=c.r
 o=t.S
 i=J.fJ(11,o)
@@ -75602,7 +75604,7 @@ B.f.E(r,A.b([B.ay,A.dj(B.a7o,q,!1,s,f,new A.aOK(c,b),o)],j))}r.push(B.ay)
 r.push(A.EE(B.a3,new A.aOL(c,b),B.bdK,B.bgc,c.c))
 if(c.c)B.f.E(r,A.b([B.ay,A.e7(!1,g.f,"Vazio = sem data final","Meses futuros",B.eu,f,B.tB,f)],j))
 r.push(B.ay)
-r.push(A.EE(B.a3,new A.aOM(c,b),B.bfY,B.TI,c.b))
+r.push(A.EE(B.a3,new A.aOM(c,b),B.bfZ,B.TI,c.b))
 if(c.b){s=A.b([B.ay,A.oJ(new A.aON(c,b),B.Hp,A.ci([c.f],p),p)],j)
 if(!c.f)B.f.E(s,A.b([B.J,A.e7(!1,g.r,f,"Valor da parte",B.cC,f,B.iE,"R$ ")],j))
 s.push(B.J)
@@ -75817,7 +75819,7 @@ q=j.c
 n=k.ml(j.b)
 n=A.p(new A.F(n,new A.aQ_(a),A.D(n).i("F<1,bz<f>>")),t.r)
 n.push(B.mz)
-return A.ah(A.b([r,B.J,s,B.J,p,B.J,A.dj(B.n0,q,!0,n,new A.bJ("category-"+q,t.O),new A.aQ0(j,k,b),o),B.J,A.cv(!1,A.ax(16),!0,A.oc(l,A.z(k.kF(j.d),l,l,l,l,l,l,l,l),B.kk,!1,!1,!1,!1,l,l),l,!0,l,l,l,l,l,l,l,l,l,l,new A.aQ1(j,k,a,b),l,l,l,l,l,l,l),B.J,k.ID(m.c),B.J,A.iy(B.fC,B.bey,new A.aQ2(k,a,m.d),A.tW(l,l,l,l,l,l,l,l,l,A.ba(a,B.bO),l,B.lo,l,l,l,new A.aT(A.ba(a,B.bO),1,B.Y,-1),l,l,l,l))],t.n),B.F,l,B.w,B.C)},
+return A.ah(A.b([r,B.J,s,B.J,p,B.J,A.dj(B.n0,q,!0,n,new A.bJ("category-"+q,t.O),new A.aQ0(j,k,b),o),B.J,A.cv(!1,A.ax(16),!0,A.oc(l,A.z(k.kF(j.d),l,l,l,l,l,l,l,l),B.kk,!1,!1,!1,!1,l,l),l,!0,l,l,l,l,l,l,l,l,l,l,new A.aQ1(j,k,a,b),l,l,l,l,l,l,l),B.J,k.ID(m.c),B.J,A.iy(B.fC,B.bez,new A.aQ2(k,a,m.d),A.tW(l,l,l,l,l,l,l,l,l,A.ba(a,B.bO),l,B.lo,l,l,l,new A.aT(A.ba(a,B.bO),1,B.Y,-1),l,l,l,l))],t.n),B.F,l,B.w,B.C)},
 $S:37}
 A.aPW.prototype={
 $1(a){this.c.$1(new A.aPT(this.a,this.b,a))},
@@ -75934,7 +75936,7 @@ r=j.d
 o=l.gox()
 o=A.p(new A.F(o,new A.aQg(a),A.D(o).i("F<1,bz<f>>")),t.r)
 o.push(B.mz)
-return A.ah(A.b([s,B.J,q,B.J,A.dj(B.n0,r,!0,o,new A.bJ("category-"+r,t.O),new A.aQh(j,l,b),p),B.J,A.cv(!1,A.ax(16),!0,A.oc(m,A.z(l.kF(j.b),m,m,m,m,m,m,m,m),B.kk,!1,!1,!1,!1,m,m),m,!0,m,m,m,m,m,m,m,m,m,m,new A.aQi(j,a,b),m,m,m,m,m,m,m),B.J,l.ID(n.c),B.J,A.iy(B.fC,B.beN,new A.aQj(l,a,n.d),A.tW(m,m,m,m,m,m,m,m,m,A.ba(a,B.bO),m,B.lo,m,m,m,new A.aT(A.ba(a,B.bO),1,B.Y,-1),m,m,m,m))],t.n),B.F,m,B.w,B.C)},
+return A.ah(A.b([s,B.J,q,B.J,A.dj(B.n0,r,!0,o,new A.bJ("category-"+r,t.O),new A.aQh(j,l,b),p),B.J,A.cv(!1,A.ax(16),!0,A.oc(m,A.z(l.kF(j.b),m,m,m,m,m,m,m,m),B.kk,!1,!1,!1,!1,m,m),m,!0,m,m,m,m,m,m,m,m,m,m,new A.aQi(j,a,b),m,m,m,m,m,m,m),B.J,l.ID(n.c),B.J,A.iy(B.fC,B.beO,new A.aQj(l,a,n.d),A.tW(m,m,m,m,m,m,m,m,m,A.ba(a,B.bO),m,B.lo,m,m,m,new A.aT(A.ba(a,B.bO),1,B.Y,-1),m,m,m,m))],t.n),B.F,m,B.w,B.C)},
 $S:37}
 A.aQd.prototype={
 $1(a){this.b.$1(new A.aQa(this.a,a))},
@@ -76047,7 +76049,7 @@ $1(a){return a.x===this.a&&!a.d.eu(this.b.d)},
 $S:4}
 A.aNJ.prototype={
 $1(a){var s=null,r=this.a
-return A.de(!0,new A.ai(B.bq,A.ah(A.b([B.bfw,B.ay,A.z("Este lan\xe7amento faz parte de uma sequ\xeancia. O que deseja excluir?",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.68),s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.eT(B.Tx,new A.aNG(r,a,this.b),s),B.ch,A.Dq(B.bgj,new A.aNH(r,a,this.c),A.tW(s,s,s,s,s,s,s,s,s,s,s,B.w9,s,s,s,s,s,s,s,s))],t.n),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
+return A.de(!0,new A.ai(B.bq,A.ah(A.b([B.bfx,B.ay,A.z("Este lan\xe7amento faz parte de uma sequ\xeancia. O que deseja excluir?",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.68),s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.eT(B.Tx,new A.aNG(r,a,this.b),s),B.ch,A.Dq(B.bgj,new A.aNH(r,a,this.c),A.tW(s,s,s,s,s,s,s,s,s,s,s,B.w9,s,s,s,s,s,s,s,s))],t.n),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
 $S:41}
 A.aNG.prototype={
 $0(){A.ay(this.b,!1).bw()
@@ -76111,7 +76113,7 @@ i=A.hM(new A.ca(r,i),new A.aRu(),i.i("k.E"),t.r)
 r=A.p(i,A.l(i).i("k.E"))
 i=t.n
 e=A.b([n,B.J,A.dj(B.a7h,j,!0,r,new A.bJ("transfer-destination-"+p,t.O),new A.aRv(f,a0),s),B.J,A.cv(!1,A.ax(16),!0,A.oc(g,A.z(e.kF(f.c),g,g,g,g,g,g,g,g),B.kk,!1,!1,!1,!1,g,g),g,!0,g,g,g,g,g,g,g,g,g,g,new A.aRw(f,a,a0),g,g,g,g,g,g,g)],i)
-if(d&&!k){d=A.b([B.J,A.EE(B.a3,new A.aRx(f,a0),B.bg6,B.bfV,f.d)],i)
+if(d&&!k){d=A.b([B.J,A.EE(B.a3,new A.aRx(f,a0),B.bg7,B.bfW,f.d)],i)
 if(f.d)B.f.E(d,A.b([B.ay,A.e7(!1,h.x,"Vazio = sem data final","Quantidade de meses futuros",B.eu,g,B.tB,g)],i))
 B.f.E(e,d)}return A.ah(e,B.F,g,B.w,B.C)},
 $S:37}
@@ -76356,7 +76358,7 @@ A.ay(n,!1).bw()},
 $S:0}
 A.aNE.prototype={
 $1(a){var s=null,r=t.I.a(A.i(a).c.h(0,A.I(t.W))).d,q=A.ax(22)
-return A.j5(A.b([A.cT(B.cJ,s,s,new A.aNC(a),s,s),A.eT(B.pO,new A.aND(a),A.C2(A.ba(a,B.z2),s,s,s,s,s,s))],t.n),r,B.bg4,new A.dk(q,B.T),B.TA)},
+return A.j5(A.b([A.cT(B.cJ,s,s,new A.aNC(a),s,s),A.eT(B.pO,new A.aND(a),A.C2(A.ba(a,B.z2),s,s,s,s,s,s))],t.n),r,B.bg5,new A.dk(q,B.T),B.TA)},
 $S:53}
 A.aNC.prototype={
 $0(){return A.ay(this.a,!1).bx(!1)},
@@ -76726,7 +76728,7 @@ r.cN(q?"Fatura paga e debitada da conta.":"N\xe3o h\xe1 fatura pendente ou conta
 $S:0}
 A.aNP.prototype={
 $1(a){var s=null,r=t.n
-return A.de(!0,new A.ai(B.bq,A.ah(A.b([B.beW,B.ch,A.z("Os gastos pagos voltam para pendente e o lan\xe7amento de pagamento da conta ser\xe1 removido quando encontrado.",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.68),s,s,s,s,s,s,s,s,s,s,s,s,s,1.35,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.aV(A.b([A.aZ(A.Dq(B.cJ,new A.aNN(a),s),1),B.c4,A.aZ(A.eT(B.bdP,new A.aNO(this.a,this.b,this.c,a),s),1)],r),B.F,B.w,B.C,0)],r),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
+return A.de(!0,new A.ai(B.bq,A.ah(A.b([B.beX,B.ch,A.z("Os gastos pagos voltam para pendente e o lan\xe7amento de pagamento da conta ser\xe1 removido quando encontrado.",s,s,s,s,A.ar(s,s,t.I.a(A.i(a).c.h(0,A.I(t.W))).e.a6(0.68),s,s,s,s,s,s,s,s,s,s,s,s,s,1.35,!0,s,s,s,s,s,s,s,s),s,s,s),B.bn,A.aV(A.b([A.aZ(A.Dq(B.cJ,new A.aNN(a),s),1),B.c4,A.aZ(A.eT(B.bdP,new A.aNO(this.a,this.b,this.c,a),s),1)],r),B.F,B.w,B.C,0)],r),B.a1,s,B.w,B.an),s),!0,!1,B.a3,!0,!0)},
 $S:41}
 A.aNN.prototype={
 $0(){return A.ay(this.a,!1).bw()},
@@ -76999,7 +77001,7 @@ m=t.n
 l=A.he(B.bE,A.b([A.z("Receitas "+A.o(d.a.pb(k)),c,c,c,c,A.ar(c,c,i,c,c,c,c,c,c,c,c,c,c,c,c,c,c,!0,c,c,c,c,c,c,c,c),c,c,c),A.z("Despesas "+A.o(d.a.pb(j)),c,c,c,c,A.ar(c,c,h,c,c,c,c,c,c,c,c,c,c,c,c,c,c,!0,c,c,c,c,c,c,c,c),c,c,c)],m),B.c_,0,12)
 f=A.b([],m)
 for(e=["S","T","Q","Q","S","S","D"],o=0;o<7;++o)f.push(new A.my(1,B.f3,new A.kr(B.ar,c,c,A.z(e[o],c,c,c,c,c,c,c,c),c),c))
-b=A.b([B.bdz,B.ch,new A.nI(p+" "+A.W(b),new A.aSN(d),new A.aSO(d),c),B.ay,l,B.J,A.aV(f,B.F,B.w,B.C,0),A.kH(new A.aSP(d,A.az(a),A.aC8(s)-1,q,i,h)),B.ay,B.bfK],m)
+b=A.b([B.bdz,B.ch,new A.nI(p+" "+A.W(b),new A.aSN(d),new A.aSO(d),c),B.ay,l,B.J,A.aV(f,B.F,B.w,B.C,0),A.kH(new A.aSP(d,A.az(a),A.aC8(s)-1,q,i,h)),B.ay,B.bfL],m)
 a=d.e
 if(a!=null){s=d.d
 m=A.b([B.ii,A.z(A.o(a)+"/"+A.X(s)+"/"+A.W(s),c,c,c,c,B.pK,c,c,c)],m)
@@ -77154,7 +77156,7 @@ m.toString
 s=t.n
 r=A.b([B.a2q],s)
 q=o.c
-if(q.length!==0)r.push(A.k7(B.tF,B.beU,o.d,A.kY(n,n,n,n,n,n,n,n,n,B.df,n,n,n,n,n,n,n,n,n,n)))
+if(q.length!==0)r.push(A.k7(B.tF,B.beV,o.d,A.kY(n,n,n,n,n,n,n,n,n,B.df,n,n,n,n,n,n,n,n,n,n)))
 r=A.b([A.aV(r,B.F,B.w,B.C,0),B.ay],s)
 q=q.length
 if(q===0){q=m.c.a6(0.9)
@@ -77578,7 +77580,7 @@ B(a5){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0=this,a1=null,a2="from",a3=A.b
 a4.toString
 s=a0.d
 s===$&&A.a()
-s=A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,a1,a1,a1,a1,a1,a1,!1,a1,a1,a1,a1,a1,A.z(A.o(a4.aQN(s))+" resultado(s)",a1,a1,a1,a1,a1,a1,a1,a1),a1,B.beT,a1,A.ck(a1,a1,a1,B.ki,a1,a1,a1,new A.b0V(a5),a1,a1,a1,"Fechar",a1),a1)
+s=A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,a1,a1,a1,a1,a1,a1,!1,a1,a1,a1,a1,a1,A.z(A.o(a4.aQN(s))+" resultado(s)",a1,a1,a1,a1,a1,a1,a1,a1),a1,B.beU,a1,A.ck(a1,a1,a1,B.ki,a1,a1,a1,new A.b0V(a5),a1,a1,a1,"Fechar",a1),a1)
 a4=t.n
 r=A.b([],a4)
 if(a0.e.a!==0){q=A.b([],a4)
@@ -77605,9 +77607,9 @@ if(q.x){q=A.z(q.z,a1,a1,a1,a1,a1,a1,a1,a1)
 p=A.z(a0.d.h(0,a2)==null?"Todas as datas":a0.a2d(a0.d.h(0,a2))+" \u2014 "+a0.a2d(a0.d.h(0,"to")),a1,a1,a1,a1,a1,a1,a1,a1)
 n=a0.d.h(0,a2)==null?a1:A.ck(a1,a1,a1,B.ki,a1,a1,a1,new A.b11(a0),a1,a1,a1,"Limpar per\xedodo",a1)
 r.push(A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,a1,a1,a1,a1,a1,new A.b12(a0,a5),!1,a1,a1,a1,a1,a1,p,a1,q,a1,n,a1))}B.f.E(r,a0.a.y)
-if(a0.a.Q)B.f.E(r,A.b([B.ii,A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,B.a6F,a1,a1,a1,a1,new A.b13(a0,a5),!1,a1,a1,a1,a1,a1,a1,a1,B.bfi,a1,a1,a1),A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,B.a6S,a1,a1,a1,a1,new A.b14(a0,a5),!1,a1,a1,a1,a1,a1,a1,a1,B.TB,a1,a1,a1)],a4))
+if(a0.a.Q)B.f.E(r,A.b([B.ii,A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,B.a6F,a1,a1,a1,a1,new A.b13(a0,a5),!1,a1,a1,a1,a1,a1,a1,a1,B.bfj,a1,a1,a1),A.fh(!1,a1,a1,a1,!0,a1,a1,a1,!0,a1,B.a6S,a1,a1,a1,a1,new A.b14(a0,a5),!1,a1,a1,a1,a1,a1,a1,a1,B.TB,a1,a1,a1)],a4))
 r.push(A.k7(B.a6p,B.be4,a0.gaIl(),a1))
-return A.de(!0,new A.av(a1,a3.a.b*0.84,A.ah(A.b([s,A.aZ(A.ly(r,B.rF,a1,a1,!1),1),new A.ai(B.cr,A.aV(A.b([A.aZ(A.Dq(B.beY,new A.b15(a0),a1),1),B.c4,A.aZ(A.eT(B.TE,new A.b0Y(a0,a5),a1),1)],a4),B.F,B.w,B.C,0),a1)],a4),B.F,a1,B.w,B.C),a1),!0,!1,B.a3,!0,!0)},
+return A.de(!0,new A.av(a1,a3.a.b*0.84,A.ah(A.b([s,A.aZ(A.ly(r,B.rF,a1,a1,!1),1),new A.ai(B.cr,A.aV(A.b([A.aZ(A.Dq(B.beZ,new A.b15(a0),a1),1),B.c4,A.aZ(A.eT(B.TE,new A.b0Y(a0,a5),a1),1)],a4),B.F,B.w,B.C,0),a1)],a4),B.F,a1,B.w,B.C),a1),!0,!1,B.a3,!0,!0)},
 a2d(a){var s=a==null?null:J.cL(a),r=A.i0(s==null?"":s)
 return r==null?"":""+A.az(r)+"/"+A.X(r)+"/"+A.W(r)}}
 A.b17.prototype={
@@ -77758,7 +77760,7 @@ s.U$=$.al()
 s.P$=0
 this.aA()},
 B(a){var s=null,r=A.dQ(s,B.aQ,!1,s,!0,B.U,s,A.e3(),this.d,s,s,s,s,s,2,B.BA,B.ah,!0,s,!0,s,!1,s,B.aS,s,s,s,s,s,s,40,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,s,!1,s,!0,s,B.aP,s,s,s,s,s,s,s,s,s,s,s,s,!0,B.au,s,B.bI,s,s,s,s)
-return A.j5(A.b([A.cT(B.cJ,s,s,new A.b0x(a),s,s),A.eT(B.pP,new A.b0y(this,a),s)],t.n),s,r,s,B.bep)}}
+return A.j5(A.b([A.cT(B.cJ,s,s,new A.b0x(a),s,s),A.eT(B.pP,new A.b0y(this,a),s)],t.n),s,r,s,B.beq)}}
 A.b0x.prototype={
 $0(){A.ay(this.a,!1).bx(null)
 return null},
@@ -77841,8 +77843,8 @@ o=q.c
 o.toString
 A.ay(o,!1).bx(!0)},
 B(a){var s=this,r=null,q=t.I.a(A.i(a).c.h(0,A.I(t.W))).d,p=A.ax(28),o=A.b4(a,B.eO,t.w).w,n=A.z(s.a.c,r,r,r,r,r,r,r,r),m=s.gSj(),l=s.a.f,k=t.N
-k=A.b([B.bgd,B.dl,n,B.aU,A.dQ(!1,B.aQ,!1,r,!0,B.U,r,A.e3(),m,r,r,r,r,r,2,A.jS(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"MXRF11 ou PETR4",r,r,r,r,r,r,r,r,"C\xf3digo de negocia\xe7\xe3o",!0,!0,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,r,l,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.lz,r,r,r,r),B.d6,A.oJ(new A.bai(s),B.awD,A.ci([s.ga1t()],k),k),B.d6,A.dQ(r,B.aQ,!1,r,!0,B.U,r,A.e3(),s.gRu(),r,r,r,r,r,2,A.jS(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.w,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Pre\xe7o por cota/a\xe7\xe3o",!0,!0,!1,r,r,r,r,r,"R$ ",r,r,r,r,r,r,r,r),B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,B.pF,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,r,!1,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.bI,r,r,r,r),B.d6,B.bez,B.bn,new A.av(1/0,r,A.pI(B.B7,B.bfJ,s.gaCu(),r),r)],t.n)
-if(s.a.e!=null)k.push(A.cT(B.bfF,r,r,new A.baj(s,a),r,r))
+k=A.b([B.bgd,B.dl,n,B.aU,A.dQ(!1,B.aQ,!1,r,!0,B.U,r,A.e3(),m,r,r,r,r,r,2,A.jS(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"MXRF11 ou PETR4",r,r,r,r,r,r,r,r,"C\xf3digo de negocia\xe7\xe3o",!0,!0,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,r,l,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.lz,r,r,r,r),B.d6,A.oJ(new A.bai(s),B.awD,A.ci([s.ga1t()],k),k),B.d6,A.dQ(r,B.aQ,!1,r,!0,B.U,r,A.e3(),s.gRu(),r,r,r,r,r,2,A.jS(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.w,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Pre\xe7o por cota/a\xe7\xe3o",!0,!0,!1,r,r,r,r,r,"R$ ",r,r,r,r,r,r,r,r),B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,B.pF,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,r,!1,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.bI,r,r,r,r),B.d6,B.beA,B.bn,new A.av(1/0,r,A.pI(B.B7,B.bfK,s.gaCu(),r),r)],t.n)
+if(s.a.e!=null)k.push(A.cT(B.bfG,r,r,new A.baj(s,a),r,r))
 return A.aU(r,A.eR(A.ah(k,B.a1,r,B.w,B.an),r,r,r,new A.ac(20,22,20,18+o.f.d),r,B.ao),B.G,r,r,new A.aI(q,r,r,p,r,r,B.W),r,r,r,r,r,r,r,r)}}
 A.bag.prototype={
 $0(){var s=this.a,r=A.c4("^[A-Z]{4}\\d{1,2}$",!0,!1)
@@ -77982,8 +77984,8 @@ if(p!=null)B.f.E(i,A.b([A.z(A.cC(p.b),g,g,g,g,B.Tu,g,g,g),A.z(A.bAz(p.a),g,g,g,g
 if(s.length===0)i.push(B.b0H)
 else i.push(A.kH(new A.b4z(h,s,r)))
 i.push(B.ay)
-i.push(B.beE)
-r=A.b([n,B.J,B.bf8,B.ay,m,B.aU,l,B.bn,A.aU(g,A.ah(i,B.a1,g,B.w,B.C),B.G,g,g,new A.aI(r.c,g,j,k,g,g,B.W),g,g,g,g,B.cr,g,g,1/0),B.bn],o)
+i.push(B.beF)
+r=A.b([n,B.J,B.bf9,B.ay,m,B.aU,l,B.bn,A.aU(g,A.ah(i,B.a1,g,B.w,B.C),B.G,g,g,new A.aI(r.c,g,j,k,g,g,B.W),g,g,g,g,B.cr,g,g,1/0),B.bn],o)
 o=A.D(s).i("d2<1>")
 o=A.ia(new A.d2(s,o),0,A.l8(18,"count",t.S),o.i("a7.E"))
 B.f.E(r,new A.F(o,new A.b4A(),o.$ti.i("F<a7.E,c>")))
@@ -78336,7 +78338,7 @@ q=A.b([A.aV(A.b([q,A.ck(k,k,k,B.a6z,k,k,k,p.as?k:p.gafK(),k,k,k,"Atualizar cota\
 if(p.as)q.push(B.b0F)
 q.push(B.ch)
 if(n>0)q.push(new A.ai(B.k5,A.z(""+n+" investimento(s) sem c\xf3digo. Informe o c\xf3digo em Editar investimento.",k,k,k,k,A.ar(k,k,A.ba(a,B.e1),k,k,k,k,k,k,k,k,11,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k,k),k))
-if(o.length===0)q.push(B.bfr)
+if(o.length===0)q.push(B.bfs)
 if(o.length!==0){p=A.b([],m)
 for(m=o.length,l=0;l<o.length;o.length===m||(0,A.E)(o),++l)p.push(new A.ai(B.a1e,new A.ef(new A.awn(j,o[l],s,r),k),k))
 q.push(A.eR(A.aV(p,B.a1,B.w,B.C,0),k,k,k,k,k,B.bu))}return A.aU(k,A.ah(q,B.a1,k,B.w,B.C),B.G,k,k,new A.aI(s.c,k,g,i,k,k,B.W),k,k,new A.bJ("market-quotes-"+h,t.O),B.a1i,B.dN,k,k,1/0)},
@@ -78412,7 +78414,7 @@ B(a){var s=this,r=null,q=t.n,p=A.b([],q)
 if(s.a.c)B.f.E(p,A.b([A.dj(B.a7k,s.f,!1,B.aTl,r,new A.bbC(s),t.N),B.J],q))
 p.push(A.dQ(r,B.aQ,!0,r,!0,B.U,r,A.e3(),s.d,r,r,r,r,r,2,A.jS(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.e,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"C\xf3digo de negocia\xe7\xe3o",!0,!0,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),B.ah,!0,r,!0,r,!1,r,B.aS,r,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,new A.bbD(s),r,!1,r,r,!1,r,!0,r,B.aP,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.au,r,B.lz,r,r,r,r))
 p=A.ah(p,B.F,r,B.w,B.an)
-return A.j5(A.b([A.cT(B.cJ,r,r,new A.bbE(a),r,r),A.cT(B.pP,r,r,s.gaDl(),r,r)],q),r,p,r,B.bfA)}}
+return A.j5(A.b([A.cT(B.cJ,r,r,new A.bbE(a),r,r),A.cT(B.pP,r,r,s.gaDl(),r,r)],q),r,p,r,B.bfB)}}
 A.bbA.prototype={
 $0(){return this.a.e="Use um c\xf3digo como PETR4 ou MXRF11."},
 $S:0}
@@ -78914,7 +78916,7 @@ A.bgV.prototype={
 $0(){return this.a.x="N\xe3o foi poss\xedvel trocar de conta agora. Tente novamente."},
 $S:0}
 A.a59.prototype={
-B(a){var s,r,q,p,o,n,m=this,l=null,k=t.n,j=A.b([B.a66,B.bn,A.z("Blur Finance",l,l,l,l,B.wv,B.cm,l,l),B.ay,B.beB,B.SD],k),i=m.d
+B(a){var s,r,q,p,o,n,m=this,l=null,k=t.n,j=A.b([B.a66,B.bn,A.z("Blur Finance",l,l,l,l,B.wv,B.cm,l,l),B.ay,B.beC,B.SD],k),i=m.d
 if(i.length!==0)j.push(A.z(i,l,l,l,l,l,B.cm,l,l))
 i=m.c
 s=i.length!==0
@@ -78937,9 +78939,9 @@ if(p!=null)B.f.E(i,A.b([B.J,A.z(p,l,l,l,l,l,B.cm,l,l)],k))
 p=m.f
 if(p!=null)B.f.E(i,A.b([B.J,A.z(p,l,l,l,l,A.ar(l,l,t.I.a(A.i(a).c.h(0,A.I(t.W))).Q,l,l,l,l,l,l,l,l,l,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),B.cm,l,l)],k))
 i.push(B.jj)
-if(r==="none"&&!q)B.f.E(i,A.b([B.bdb,B.J,A.eT(B.bfO,m.Q,l)],k))
-i.push(A.cT(B.bfB,l,l,m.as,l,l))
-if(s)i.push(A.cT(B.bfD,l,l,m.ax,l,l))
+if(r==="none"&&!q)B.f.E(i,A.b([B.bdb,B.J,A.eT(B.bfP,m.Q,l)],k))
+i.push(A.cT(B.bfC,l,l,m.as,l,l))
+if(s)i.push(A.cT(B.bfE,l,l,m.ax,l,l))
 B.f.E(j,i)}return A.k0(l,l,new A.jH(A.de(!0,A.ek(A.eR(new A.cU(B.xI,A.jJ(new A.ai(B.a22,A.ah(j,B.bV,l,B.w,B.an),l),l),l),l,l,l,B.rG,l,B.ao),l,l),!0,!1,B.a3,!0,!0),l),l,l,l)},
 gc8(){return this.d}}
 A.ahN.prototype={}
@@ -155239,8 +155241,8 @@ B.Yw=new A.kr(B.ar,null,null,B.bds,null)
 B.blJ=new A.aMg(0,"material")
 B.yl=new A.nO(null,null,null,null,null,null,null,null,null,null)
 B.yi=new A.kr(B.ar,null,null,B.yl,null)
-B.bfp=new A.Y("Nenhum pedido nesta sele\xe7\xe3o.",null,null,null,null,null,null,null,null,null)
-B.Yx=new A.kr(B.ar,null,null,B.bfp,null)
+B.bfq=new A.Y("Nenhum pedido nesta sele\xe7\xe3o.",null,null,null,null,null,null,null,null,null)
+B.Yx=new A.kr(B.ar,null,null,B.bfq,null)
 B.yj=new A.alV(4,"luminance")
 B.aD=new A.e6(26,"cf")
 B.j=new A.e6(5,"mn")
@@ -155595,12 +155597,12 @@ B.rB=new A.Zf(0,"down")
 B.ah=new A.Zf(1,"start")
 B.a0h=new A.Zh(null)
 B.a0i=new A.Js(null,null,null,null,null,null,null,null,null)
-B.bfG=new A.Y("Adicionar / editar categorias",null,null,null,null,null,null,null,null,null)
-B.mz=new A.bz("__add_category__",B.bfG,B.aL,null,t.r)
-B.bfb=new A.Y("Adicionar novo",null,null,null,null,null,null,null,null,null)
-B.zy=new A.bz("__new__",B.bfb,B.aL,null,t.r)
-B.bf1=new A.Y("Todos os cart\xf5es",null,null,null,null,null,null,null,null,null)
-B.zz=new A.bz("",B.bf1,B.aL,null,t.r)
+B.bfH=new A.Y("Adicionar / editar categorias",null,null,null,null,null,null,null,null,null)
+B.mz=new A.bz("__add_category__",B.bfH,B.aL,null,t.r)
+B.bfc=new A.Y("Adicionar novo",null,null,null,null,null,null,null,null,null)
+B.zy=new A.bz("__new__",B.bfc,B.aL,null,t.r)
+B.bf2=new A.Y("Todos os cart\xf5es",null,null,null,null,null,null,null,null,null)
+B.zz=new A.bz("",B.bf2,B.aL,null,t.r)
 B.bdd=new A.Y("Todos os ativos",null,null,null,null,null,null,null,null,null)
 B.a0s=new A.bz("",B.bdd,B.aL,null,t.r)
 B.bdH=new A.Y("Todos",null,null,null,null,null,null,null,null,null)
@@ -155828,14 +155830,14 @@ B.be5=new A.Y("Metas",null,B.pI,null,null,null,null,null,null,null)
 B.a2n=new A.my(1,B.f3,B.be5,null)
 B.a5=new A.jP(400)
 B.wv=new A.L(!0,null,null,"Century Gothic",null,null,20,B.a5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.bg2=new A.Y("Evolu\xe7\xe3o do patrim\xf4nio",null,B.wv,null,null,null,null,null,null,null)
-B.a2o=new A.my(1,B.f3,B.bg2,null)
+B.bg3=new A.Y("Evolu\xe7\xe3o do patrim\xf4nio",null,B.wv,null,null,null,null,null,null,null)
+B.a2o=new A.my(1,B.f3,B.bg3,null)
 B.bgg=new A.Y("Investimentos",null,B.pI,null,null,null,null,null,null,null)
 B.a2p=new A.my(1,B.f3,B.bgg,null)
 B.aZ=new A.jP(700)
 B.Tq=new A.L(!0,null,null,null,null,null,19,B.aZ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.bft=new A.Y("Cart\xf5es",null,B.Tq,null,null,null,null,null,null,null)
-B.a2q=new A.my(1,B.f3,B.bft,null)
+B.bfu=new A.Y("Cart\xf5es",null,B.Tq,null,null,null,null,null,null,null)
+B.a2q=new A.my(1,B.f3,B.bfu,null)
 B.bjK=new A.a8W(null)
 B.A2=new A.my(1,B.f3,B.bjK,null)
 B.a2r=new A.C_(null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -156459,8 +156461,8 @@ B.a8u=new A.xC(4,"bottom")
 B.a4K=new A.a9(62784,"MaterialIcons",!1)
 B.a6b=new A.bi(B.a4K,null,null,null,null)
 B.bdw=new A.Y("Autentica\xe7\xe3o em duas etapas",null,null,null,null,null,null,null,null,null)
-B.beS=new A.Y("Ainda indispon\xedvel no app. A prote\xe7\xe3o da conta Google pode ser configurada nas op\xe7\xf5es de seguran\xe7a do Google.",null,null,null,null,null,null,null,null,null)
-B.a8v=new A.Lr(B.a6b,B.bdw,B.beS,null,null,null,null,null,null,null,!0,null,null,!1,null,null,null,!1,null,null,null,null,null,null,null,null,!0,null,null)
+B.beT=new A.Y("Ainda indispon\xedvel no app. A prote\xe7\xe3o da conta Google pode ser configurada nas op\xe7\xf5es de seguran\xe7a do Google.",null,null,null,null,null,null,null,null,null)
+B.a8v=new A.Lr(B.a6b,B.bdw,B.beT,null,null,null,null,null,null,null,!0,null,null,!1,null,null,null,!1,null,null,null,null,null,null,null,null,!0,null,null)
 B.tP=s([0,2,8],t.t)
 B.a8x=s([0,4,2,1],t.t)
 B.a8y=s([0,6,12,18],t.t)
@@ -156471,12 +156473,12 @@ B.aUb=s([1373.2198709594231,-1100.4251190754821,-7.278681089101213],t.u)
 B.aSD=s([-271.815969077903,559.6580465940733,-32.46047482791194],t.u)
 B.aXn=s([1.9622899599665666,-57.173814538844006,308.7233197812385],t.u)
 B.akz=s([B.aUb,B.aSD,B.aXn],t.zg)
-B.bfc=new A.Y("Pr\xe9-fixado",null,null,null,null,null,null,null,null,null)
-B.a0C=new A.bz("Pr\xe9-fixado",B.bfc,B.aL,null,t.r)
-B.bem=new A.Y("CDI",null,null,null,null,null,null,null,null,null)
-B.a0k=new A.bz("CDI",B.bem,B.aL,null,t.r)
-B.bf6=new A.Y("Selic",null,null,null,null,null,null,null,null,null)
-B.a0z=new A.bz("Selic",B.bf6,B.aL,null,t.r)
+B.bfd=new A.Y("Pr\xe9-fixado",null,null,null,null,null,null,null,null,null)
+B.a0C=new A.bz("Pr\xe9-fixado",B.bfd,B.aL,null,t.r)
+B.ben=new A.Y("CDI",null,null,null,null,null,null,null,null,null)
+B.a0k=new A.bz("CDI",B.ben,B.aL,null,t.r)
+B.bf7=new A.Y("Selic",null,null,null,null,null,null,null,null,null)
+B.a0z=new A.bz("Selic",B.bf7,B.aL,null,t.r)
 B.bgr=new A.Y("IPCA +",null,null,null,null,null,null,null,null,null)
 B.a0n=new A.bz("IPCA +",B.bgr,B.aL,null,t.r)
 B.Fy=s([B.a0C,B.a0k,B.a0z,B.a0n],t.FG)
@@ -156496,8 +156498,8 @@ B.ar4=s([0,1,2,3,4,5,6,7,8,10,12,14,16,20,24,28,32,40,48,56,64,80,96,112,128,160
 B.ar6=s([2,3,7],t.t)
 B.G5=s([3226,6412,200,168,38,38,134,134,100,100,100,100,68,68,68,68],t.t)
 B.ar8=s([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,7],t.t)
-B.bfz=new A.Y("Comprar abaixo",null,null,null,null,null,null,null,null,null)
-B.WX=new A.eJ("descer",null,B.bfz,t.Zx)
+B.bfA=new A.Y("Comprar abaixo",null,null,null,null,null,null,null,null,null)
+B.WX=new A.eJ("descer",null,B.bfA,t.Zx)
 B.be1=new A.Y("Vender acima",null,null,null,null,null,null,null,null,null)
 B.X_=new A.eJ("subir",null,B.be1,t.Zx)
 B.awD=s([B.WX,B.X_],t.CK)
@@ -156736,15 +156738,15 @@ B.aR4=s(["Inter","Manrope","Roboto","Arial","sans-serif"],t.s)
 B.jA=new A.p2(0,"once")
 B.a5g=new A.a9(63632,"MaterialIcons",!1)
 B.a6M=new A.bi(B.a5g,null,null,null,null)
-B.bfo=new A.Y("\xdanica",null,null,null,null,null,null,null,null,null)
-B.X4=new A.eJ(B.jA,B.a6M,B.bfo,t.sm)
+B.bfp=new A.Y("\xdanica",null,null,null,null,null,null,null,null,null)
+B.X4=new A.eJ(B.jA,B.a6M,B.bfp,t.sm)
 B.lP=new A.p2(1,"fixedMonthly")
 B.a69=new A.bi(B.tB,null,null,null,null)
 B.bdl=new A.Y("Fixa",null,null,null,null,null,null,null,null,null)
 B.WY=new A.eJ(B.lP,B.a69,B.bdl,t.sm)
 B.lQ=new A.p2(2,"installments")
-B.bfM=new A.Y("Parcelas",null,null,null,null,null,null,null,null,null)
-B.WV=new A.eJ(B.lQ,B.AY,B.bfM,t.sm)
+B.bfN=new A.Y("Parcelas",null,null,null,null,null,null,null,null,null)
+B.WV=new A.eJ(B.lQ,B.AY,B.bfN,t.sm)
 B.aR5=s([B.X4,B.WY,B.WV],A.at("G<eJ<p2>>"))
 B.Hk=s([280,256,256,256,40],t.t)
 B.Hl=s(["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],t.s)
@@ -156773,10 +156775,10 @@ B.Hp=s([B.X1,B.X6],t.st)
 B.oy=s([0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13],t.t)
 B.a5s=new A.a9(983281,"MaterialIcons",!1)
 B.a6w=new A.bi(B.a5s,null,null,null,null)
-B.beC=new A.Y("Gasto",null,null,null,null,null,null,null,null,null)
-B.WZ=new A.eJ(!1,B.a6w,B.beC,t.Mt)
-B.bfm=new A.Y("Estorno",null,null,null,null,null,null,null,null,null)
-B.X0=new A.eJ(!0,B.iG,B.bfm,t.Mt)
+B.beD=new A.Y("Gasto",null,null,null,null,null,null,null,null,null)
+B.WZ=new A.eJ(!1,B.a6w,B.beD,t.Mt)
+B.bfn=new A.Y("Estorno",null,null,null,null,null,null,null,null,null)
+B.X0=new A.eJ(!0,B.iG,B.bfn,t.Mt)
 B.Hq=s([B.WZ,B.X0],t.st)
 B.oz=s(["Renda fixa","Tesouro","FIIs","A\xe7\xf5es","Cofrinho","Outros"],t.s)
 B.Zn=new A.K(1,0.2,0.13333333333333333,0.47843137254901963,B.B)
@@ -156784,8 +156786,8 @@ B.ZO=new A.K(1,0.16470588235294117,0.13725490196078433,0.403921568627451,B.B)
 B.Zl=new A.K(1,0.09019607843137255,0.23921568627450981,0.4588235294117647,B.B)
 B.aRU=s([B.Zn,B.ZO,B.Zl],t.d)
 B.aRY=s([254,253,251,247,239,223,191,127],t.t)
-B.ber=new A.Y("Dias corridos / 365",null,null,null,null,null,null,null,null,null)
-B.a0l=new A.bz("calendar365",B.ber,B.aL,null,t.r)
+B.bes=new A.Y("Dias corridos / 365",null,null,null,null,null,null,null,null,null)
+B.a0l=new A.bz("calendar365",B.bes,B.aL,null,t.r)
 B.bei=new A.Y("Dias \xfateis / 252",null,null,null,null,null,null,null,null,null)
 B.a0B=new A.bz("business252",B.bei,B.aL,null,t.r)
 B.Hr=s([B.a0l,B.a0B],t.FG)
@@ -156847,12 +156849,12 @@ B.a_r=new A.dE("card-infinite","Infinite",2500,6000,20,28,"Visa","Nubank",B.cP)
 B.a_q=new A.dE("card-mastercard","Mastercard",1540,4500,10,18,"Mastercard","Itau",B.eU)
 B.aSs=s([B.a_r,B.a_q],t.YP)
 B.B_=new A.bi(B.AH,null,null,null,null)
-B.bg0=new A.Y("Geral",null,null,null,null,null,null,null,null,null)
-B.b_4=new A.tV(B.B_,B.B_,B.bg0)
+B.bg1=new A.Y("Geral",null,null,null,null,null,null,null,null,null)
+B.b_4=new A.tV(B.B_,B.B_,B.bg1)
 B.be_=new A.Y("Contas",null,null,null,null,null,null,null,null,null)
 B.b_8=new A.tV(B.iF,B.iF,B.be_)
-B.bfH=new A.Y("Cart\xf5es",null,null,null,null,null,null,null,null,null)
-B.b_6=new A.tV(B.kg,B.kg,B.bfH)
+B.bfI=new A.Y("Cart\xf5es",null,null,null,null,null,null,null,null,null)
+B.b_6=new A.tV(B.kg,B.kg,B.bfI)
 B.bdX=new A.Y("Metas",null,null,null,null,null,null,null,null,null)
 B.b_7=new A.tV(B.iH,B.iH,B.bdX)
 B.B9=new A.bi(B.tC,null,null,null,null)
@@ -157011,8 +157013,8 @@ B.aT6=s([B.a8E,B.aWh,B.aQU,B.aQQ,B.aT7,B.aX9,B.aST,B.aTu,B.aSF,B.aV3],t.wX)
 B.aT9=s([0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.25,0.333,0.713,0.5,0.549,0.833,0.778,0.439,0.333,0.333,0.5,0.549,0.25,0.549,0.25,0.278,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.278,0.278,0.549,0.549,0.549,0.444,0.549,0.722,0.667,0.722,0.612,0.611,0.763,0.603,0.722,0.333,0.631,0.722,0.686,0.889,0.722,0.722,0.768,0.741,0.556,0.592,0.611,0.69,0.439,0.768,0.645,0.795,0.611,0.333,0.863,0.333,0.658,0.5,0.5,0.631,0.549,0.549,0.494,0.439,0.521,0.411,0.603,0.329,0.603,0.549,0.549,0.576,0.521,0.549,0.549,0.521,0.549,0.603,0.439,0.576,0.713,0.686,0.493,0.686,0.494,0.48,0.2,0.48,0.549,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.587,0.75,0.62,0.247,0.549,0.167,0.713,0.5,0.753,0.753,0.753,0.753,1.042,0.987,0.603,0.987,0.603,0.4,0.549,0.411,0.549,0.549,0.713,0.494,0.46,0.549,0.549,0.549,0.549,1,0.603,1,0.658,0.823,0.686,0.795,0.987,0.768,0.768,0.823,0.768,0.768,0.713,0.713,0.713,0.713,0.713,0.713,0.713,0.768,0.713,0.79,0.79,0.89,0.823,0.549,0.25,0.713,0.603,0.603,1.042,0.987,0.603,0.987,0.603,0.494,0.329,0.79,0.79,0.786,0.713,0.384,0.384,0.384,0.384,0.384,0.384,0.494,0.494,0.494,0.494,0.587,0.329,0.274,0.686,0.686,0.686,0.384,0.384,0.384,0.384,0.384,0.384,0.494,0.494,0.494,0.587],t.u)
 B.bgh=new A.Y("Vida",null,null,null,null,null,null,null,null,null)
 B.X2=new A.eJ("life",B.iH,B.bgh,t.Zx)
-B.beQ=new A.Y("Categoria",null,null,null,null,null,null,null,null,null)
-B.X5=new A.eJ("category_spending",B.kh,B.beQ,t.Zx)
+B.beR=new A.Y("Categoria",null,null,null,null,null,null,null,null,null)
+B.X5=new A.eJ("category_spending",B.kh,B.beR,t.Zx)
 B.aTc=s([B.X2,B.X5],t.CK)
 B.pR=new A.ju(0,"none")
 B.fQ=new A.ju(1,"palette")
@@ -157029,18 +157031,18 @@ B.bgv=new A.ju(11,"grayRle")
 B.aTd=s([B.pR,B.fQ,B.TK,B.bgw,B.bgx,B.bgy,B.bgz,B.bgA,B.bgB,B.fR,B.TJ,B.bgv],A.at("G<ju>"))
 B.bdJ=new A.Y("Corre\xe7\xe3o de cadastro",null,null,null,null,null,null,null,null,null)
 B.a0x=new A.bz("correction",B.bdJ,B.aL,null,t.r)
-B.bfg=new A.Y("Valoriza\xe7\xe3o / rendimento",null,null,null,null,null,null,null,null,null)
-B.a0j=new A.bz("valuation",B.bfg,B.aL,null,t.r)
+B.bfh=new A.Y("Valoriza\xe7\xe3o / rendimento",null,null,null,null,null,null,null,null,null)
+B.a0j=new A.bz("valuation",B.bfh,B.aL,null,t.r)
 B.bdI=new A.Y("Aporte",null,null,null,null,null,null,null,null,null)
 B.a0A=new A.bz("contribution",B.bdI,B.aL,null,t.r)
-B.beO=new A.Y("Resgate",null,null,null,null,null,null,null,null,null)
-B.a0y=new A.bz("withdrawal",B.beO,B.aL,null,t.r)
+B.beP=new A.Y("Resgate",null,null,null,null,null,null,null,null,null)
+B.a0y=new A.bz("withdrawal",B.beP,B.aL,null,t.r)
 B.aTk=s([B.a0x,B.a0j,B.a0A,B.a0y],t.FG)
 B.HD=s(["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],t.s)
-B.bfe=new A.Y("A\xe7\xe3o",null,null,null,null,null,null,null,null,null)
-B.a0q=new A.bz("A\xe7\xf5es",B.bfe,B.aL,null,t.r)
-B.bfX=new A.Y("Fundo imobili\xe1rio",null,null,null,null,null,null,null,null,null)
-B.a0D=new A.bz("FIIs",B.bfX,B.aL,null,t.r)
+B.bff=new A.Y("A\xe7\xe3o",null,null,null,null,null,null,null,null,null)
+B.a0q=new A.bz("A\xe7\xf5es",B.bff,B.aL,null,t.r)
+B.bfY=new A.Y("Fundo imobili\xe1rio",null,null,null,null,null,null,null,null,null)
+B.a0D=new A.bz("FIIs",B.bfY,B.aL,null,t.r)
 B.aTl=s([B.a0q,B.a0D],t.FG)
 B.uC=s(["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],t.s)
 B.fW=new A.nn(0,"leading")
@@ -157157,8 +157159,8 @@ B.uI=s(["Alimenta\xe7\xe3o","Transporte","Moradia","Sa\xfade","Lazer","Pix","Out
 B.aVC=s([47,47,47,47,72,97,122,147],t.t)
 B.kK=s([0,1,3,7,15,31,63,127,255],t.t)
 B.uK=s([16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],t.t)
-B.beo=new A.Y("Mensal",null,null,null,null,null,null,null,null,null)
-B.a0u=new A.bz("monthly",B.beo,B.aL,null,t.r)
+B.bep=new A.Y("Mensal",null,null,null,null,null,null,null,null,null)
+B.a0u=new A.bz("monthly",B.bep,B.aL,null,t.r)
 B.bgm=new A.Y("Anual",null,null,null,null,null,null,null,null,null)
 B.a0r=new A.bz("yearly",B.bgm,B.aL,null,t.r)
 B.aVM=s([B.a0u,B.a0r],t.FG)
@@ -157278,8 +157280,8 @@ B.uL=s([0,128,192,224,240,248,252,254,255],t.t)
 B.HV=s([137,80,78,71,13,10,26,10],t.t)
 B.Ty=new A.Y("Dividendos",null,null,null,null,null,null,null,null,null)
 B.a0p=new A.bz("Dividendos",B.Ty,B.aL,null,t.r)
-B.bfR=new A.Y("Juros sobre capital pr\xf3prio",null,null,null,null,null,null,null,null,null)
-B.a0m=new A.bz("JCP",B.bfR,B.aL,null,t.r)
+B.bfS=new A.Y("Juros sobre capital pr\xf3prio",null,null,null,null,null,null,null,null,null)
+B.a0m=new A.bz("JCP",B.bfS,B.aL,null,t.r)
 B.aW3=s([B.a0p,B.a0m],t.FG)
 B.uM=s([0,1,3,7,15,31,63,127,255,511,1023,2047,4095,8191,16383,32767,65535,131071,262143,524287,1048575,2097151,4194303,8388607,16777215,33554431,67108863,134217727,268435455,536870911,1073741823,2147483647,4294967295],t.t)
 B.aW4=s([3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258],t.t)
@@ -157337,10 +157339,10 @@ B.aWK=s(["transferencia","investimento"],t.s)
 B.uN=s([!0,!1],t.HZ)
 B.aWM=s([A.bWE(),A.bWy(),A.bWO(),A.bWM(),A.bWG(),A.bWF(),A.bWH()],t.ox)
 B.I_=s([0,4,8,12,128,132,136,140,256,260,264,268,384,388,392,396],t.t)
-B.beV=new A.Y("Conta corrente",null,null,null,null,null,null,null,null,null)
-B.a0t=new A.bz(B.mM,B.beV,B.aL,null,t.Te)
-B.bff=new A.Y("Cart\xe3o de cr\xe9dito",null,null,null,null,null,null,null,null,null)
-B.a0v=new A.bz(B.mN,B.bff,B.aL,null,t.Te)
+B.beW=new A.Y("Conta corrente",null,null,null,null,null,null,null,null,null)
+B.a0t=new A.bz(B.mM,B.beW,B.aL,null,t.Te)
+B.bfg=new A.Y("Cart\xe3o de cr\xe9dito",null,null,null,null,null,null,null,null,null)
+B.a0v=new A.bz(B.mN,B.bfg,B.aL,null,t.Te)
 B.a0o=new A.bz(B.mO,B.TG,B.aL,null,t.Te)
 B.aWP=s([B.a0t,B.a0v,B.a0o],A.at("G<bz<mA>>"))
 B.Z4=new A.K(0.14901960784313725,0,0,0,B.B)
@@ -157356,8 +157358,8 @@ B.a6B=new A.bi(B.AQ,null,null,null,null)
 B.bd6=new A.Y("Despesa",null,null,null,null,null,null,null,null,null)
 B.WW=new A.eJ(!0,B.a6B,B.bd6,t.Mt)
 B.a6O=new A.bi(B.AL,null,null,null,null)
-B.bg1=new A.Y("Receita",null,null,null,null,null,null,null,null,null)
-B.X3=new A.eJ(!1,B.a6O,B.bg1,t.Mt)
+B.bg2=new A.Y("Receita",null,null,null,null,null,null,null,null,null)
+B.X3=new A.eJ(!1,B.a6O,B.bg2,t.Mt)
 B.I0=s([B.WW,B.X3],t.st)
 B.aX0=s([8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8],t.t)
 B.aX1=s(["pointerdown","pointermove","pointerleave","pointerup","pointercancel","touchstart","touchend","touchmove","touchcancel","mousedown","mousemove","mouseleave","mouseup","wheel"],t.s)
@@ -161886,8 +161888,8 @@ B.bd7=new A.Y("Nenhuma assinatura nesta sele\xe7\xe3o.",null,null,null,null,null
 B.b0B=new A.ai(B.rG,B.bd7,null)
 B.ww=new A.Y("Nenhum lan\xe7amento neste per\xedodo.",null,null,null,null,null,null,null,null,null)
 B.b0C=new A.ai(B.zP,B.ww,null)
-B.bfu=new A.Y("Nenhum dividendo recebido neste per\xedodo.",null,null,null,null,null,null,null,null,null)
-B.b0D=new A.ai(B.aP,B.bfu,null)
+B.bfv=new A.Y("Nenhum dividendo recebido neste per\xedodo.",null,null,null,null,null,null,null,null,null)
+B.b0D=new A.ai(B.aP,B.bfv,null)
 B.a1l=new A.ac(0,30,0,30)
 B.eg=new A.aKX(1,"down")
 B.a68=new A.bi(B.AM,44,null,null,null)
@@ -161906,8 +161908,8 @@ B.bdo=new A.Y("Nenhuma movimenta\xe7\xe3o de investimento neste per\xedodo.",nul
 B.b0H=new A.ai(B.a1q,B.bdo,null)
 B.bg9=new A.Y("Nenhuma movimenta\xe7\xe3o neste dia.",null,null,null,null,null,null,null,null,null)
 B.b0I=new A.ai(B.f1,B.bg9,null)
-B.bfT=new A.Y("Cadastre uma aplica\xe7\xe3o de renda fixa para acompanhar o rendimento.",null,null,null,null,null,null,null,null,null)
-B.b0J=new A.ai(B.rG,B.bfT,null)
+B.bfU=new A.Y("Cadastre uma aplica\xe7\xe3o de renda fixa para acompanhar o rendimento.",null,null,null,null,null,null,null,null,null)
+B.b0J=new A.ai(B.rG,B.bfU,null)
 B.b0K=new A.Mi(0,"natural")
 B.b0L=new A.Mi(1,"landscape")
 B.b0M=new A.Mi(2,"portrait")
@@ -162375,14 +162377,14 @@ B.bdx=new A.Y("Alerta atualizado. O aviso depende de uma cota\xe7\xe3o v\xe1lida
 B.b7B=new A.k3(B.bdx,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
 B.bdi=new A.Y("Limite de 200 assinaturas atingido.",null,null,null,null,null,null,null,null,null)
 B.b7C=new A.k3(B.bdi,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
-B.bf9=new A.Y("Link de convite copiado.",null,null,null,null,null,null,null,null,null)
-B.b7D=new A.k3(B.bf9,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
-B.beP=new A.Y("N\xe3o foi poss\xedvel exportar. O erro foi registrado.",null,null,null,null,null,null,null,null,null)
-B.b7E=new A.k3(B.beP,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
+B.bfa=new A.Y("Link de convite copiado.",null,null,null,null,null,null,null,null,null)
+B.b7D=new A.k3(B.bfa,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
+B.beQ=new A.Y("N\xe3o foi poss\xedvel exportar. O erro foi registrado.",null,null,null,null,null,null,null,null,null)
+B.b7E=new A.k3(B.beQ,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
 B.bda=new A.Y("Cadastre um cart\xe3o antes de vincular uma assinatura.",null,null,null,null,null,null,null,null,null)
 B.b7F=new A.k3(B.bda,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
-B.bfE=new A.Y("N\xe3o foi poss\xedvel exportar. Tente novamente.",null,null,null,null,null,null,null,null,null)
-B.b7G=new A.k3(B.bfE,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
+B.bfF=new A.Y("N\xe3o foi poss\xedvel exportar. Tente novamente.",null,null,null,null,null,null,null,null,null)
+B.b7G=new A.k3(B.bfF,null,null,null,null,null,null,null,null,null,null,null,null,B.cq,!1,null,null,null,B.U,null)
 B.SM=new A.Oy(0,"permissive")
 B.b7H=new A.Oy(1,"normal")
 B.b7I=new A.Oy(2,"forced")
@@ -162883,97 +162885,97 @@ B.beg=new A.Y("Copiar diagn\xf3stico",null,null,null,null,null,null,null,null,nu
 B.pP=new A.Y("Salvar",null,null,null,null,null,null,null,null,null)
 B.beh=new A.Y("Alterar lan\xe7amento recorrente",null,B.ef,null,null,null,null,null,null,null)
 B.bej=new A.Y("Alerta de pre\xe7o",null,null,null,null,null,null,null,null,null)
-B.bek=new A.Y("Hist\xf3rico de aportes",null,B.dU,null,null,null,null,null,null,null)
-B.bel=new A.Y("Alterar senha",null,B.ef,null,null,null,null,null,null,null)
-B.ben=new A.Y("Concluir",null,null,null,null,null,null,null,null,null)
-B.bep=new A.Y("Salvar filtro favorito",null,null,null,null,null,null,null,null,null)
-B.beq=new A.Y("Pol\xedtica de Privacidade",null,B.ef,null,null,null,null,null,null,null)
-B.bes=new A.Y("Cart\xe3o removido",null,null,null,null,null,null,null,null,null)
-B.bet=new A.Y("Carregar mais pedidos",null,null,null,null,null,null,null,null,null)
-B.beu=new A.Y("Data do recebimento",null,null,null,null,null,null,null,null,null)
-B.bev=new A.Y("Gastos e recebimentos",null,B.pI,null,null,null,null,null,null,null)
+B.bek=new A.Y("Diagn\xf3stico do app \xb7 1.2.10+2021",null,null,null,null,null,null,null,null,null)
+B.bel=new A.Y("Hist\xf3rico de aportes",null,B.dU,null,null,null,null,null,null,null)
+B.bem=new A.Y("Alterar senha",null,B.ef,null,null,null,null,null,null,null)
+B.beo=new A.Y("Concluir",null,null,null,null,null,null,null,null,null)
+B.beq=new A.Y("Salvar filtro favorito",null,null,null,null,null,null,null,null,null)
+B.ber=new A.Y("Pol\xedtica de Privacidade",null,B.ef,null,null,null,null,null,null,null)
+B.bet=new A.Y("Cart\xe3o removido",null,null,null,null,null,null,null,null,null)
+B.beu=new A.Y("Carregar mais pedidos",null,null,null,null,null,null,null,null,null)
+B.bev=new A.Y("Data do recebimento",null,null,null,null,null,null,null,null,null)
+B.bew=new A.Y("Gastos e recebimentos",null,B.pI,null,null,null,null,null,null,null)
 B.b9z=new A.L(!0,null,null,"Century Gothic",null,null,20,B.aZ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.bew=new A.Y("Relat\xf3rios",null,B.b9z,null,null,null,null,null,null,null)
-B.bex=new A.Y("Nenhum gasto nesta categoria neste m\xeas.",null,null,null,null,null,null,null,null,null)
-B.bey=new A.Y("Excluir movimenta\xe7\xe3o",null,null,null,null,null,null,null,null,null)
+B.bex=new A.Y("Relat\xf3rios",null,B.b9z,null,null,null,null,null,null,null)
+B.bey=new A.Y("Nenhum gasto nesta categoria neste m\xeas.",null,null,null,null,null,null,null,null,null)
+B.bez=new A.Y("Excluir movimenta\xe7\xe3o",null,null,null,null,null,null,null,null,null)
 B.pQ=new A.Y("Confirmar",null,null,null,null,null,null,null,null,null)
-B.bez=new A.Y("Avisos com o app aberto. Cota\xe7\xf5es podem ter atraso.",null,null,null,null,null,null,null,null,null)
-B.beA=new A.Y("Editar categorias",null,null,null,null,null,null,null,null,null)
-B.beB=new A.Y("Acesso ao teste",null,null,B.cm,null,null,null,null,null,null)
-B.beD=new A.Y("Criar parcelas mensais no cart\xe3o",null,null,null,null,null,null,null,null,null)
-B.beE=new A.Y("Toque no gr\xe1fico para consultar a data e o total.",null,B.lB,null,null,null,null,null,null,null)
-B.beF=new A.Y("Este navegador n\xe3o acessa os dados que ainda est\xe3o s\xf3 no celular.",null,null,null,null,null,null,null,null,null)
-B.beG=new A.Y("Assinatura habilitada",null,null,null,null,null,null,null,null,null)
-B.beH=new A.Y("Trocar conta Google",null,null,null,null,null,null,null,null,null)
-B.beI=new A.Y("Cofrinhos",null,B.hN,null,null,null,null,null,null,null)
-B.beJ=new A.Y("Este cadastro controla os contratos. As cobran\xe7as continuam nos lan\xe7amentos do cart\xe3o, evitando despesas duplicadas.",null,B.eL,null,null,null,null,null,null,null)
-B.beK=new A.Y("Pagos e recebidos",null,null,null,null,null,null,null,null,null)
-B.beL=new A.Y("Aprove o pedido, inclua o e-mail na lista da Play Console e confirme a inclus\xe3o na loja. Compartilhe camilablur.com/blur-finance/acesso/ para novos pedidos.",null,null,null,null,null,null,null,null,null)
-B.beM=new A.Y("As compras j\xe1 lan\xe7adas na fatura ser\xe3o preservadas.",null,null,null,null,null,null,null,null,null)
-B.beN=new A.Y("Excluir gasto",null,null,null,null,null,null,null,null,null)
+B.beA=new A.Y("Avisos com o app aberto. Cota\xe7\xf5es podem ter atraso.",null,null,null,null,null,null,null,null,null)
+B.beB=new A.Y("Editar categorias",null,null,null,null,null,null,null,null,null)
+B.beC=new A.Y("Acesso ao teste",null,null,B.cm,null,null,null,null,null,null)
+B.beE=new A.Y("Criar parcelas mensais no cart\xe3o",null,null,null,null,null,null,null,null,null)
+B.beF=new A.Y("Toque no gr\xe1fico para consultar a data e o total.",null,B.lB,null,null,null,null,null,null,null)
+B.beG=new A.Y("Este navegador n\xe3o acessa os dados que ainda est\xe3o s\xf3 no celular.",null,null,null,null,null,null,null,null,null)
+B.beH=new A.Y("Assinatura habilitada",null,null,null,null,null,null,null,null,null)
+B.beI=new A.Y("Trocar conta Google",null,null,null,null,null,null,null,null,null)
+B.beJ=new A.Y("Cofrinhos",null,B.hN,null,null,null,null,null,null,null)
+B.beK=new A.Y("Este cadastro controla os contratos. As cobran\xe7as continuam nos lan\xe7amentos do cart\xe3o, evitando despesas duplicadas.",null,B.eL,null,null,null,null,null,null,null)
+B.beL=new A.Y("Pagos e recebidos",null,null,null,null,null,null,null,null,null)
+B.beM=new A.Y("Aprove o pedido, inclua o e-mail na lista da Play Console e confirme a inclus\xe3o na loja. Compartilhe camilablur.com/blur-finance/acesso/ para novos pedidos.",null,null,null,null,null,null,null,null,null)
+B.beN=new A.Y("As compras j\xe1 lan\xe7adas na fatura ser\xe3o preservadas.",null,null,null,null,null,null,null,null,null)
+B.beO=new A.Y("Excluir gasto",null,null,null,null,null,null,null,null,null)
 B.Tz=new A.Y("Sem vencimento",null,null,null,null,null,null,null,null,null)
 B.TA=new A.Y("Excluir aporte",null,null,null,null,null,null,null,null,null)
-B.beR=new A.Y("Atualizar compara\xe7\xe3o",null,null,null,null,null,null,null,null,null)
-B.beT=new A.Y("Filtros",null,B.jn,null,null,null,null,null,null,null)
-B.beU=new A.Y("Novo cart\xe3o",null,null,null,null,null,null,null,null,null)
-B.beW=new A.Y("Reabrir fatura",null,B.ef,null,null,null,null,null,null,null)
-B.beX=new A.Y("Saldos das contas",null,B.Tk,null,null,null,null,null,null,null)
-B.beY=new A.Y("Limpar",null,null,null,null,null,null,null,null,null)
+B.beS=new A.Y("Atualizar compara\xe7\xe3o",null,null,null,null,null,null,null,null,null)
+B.beU=new A.Y("Filtros",null,B.jn,null,null,null,null,null,null,null)
+B.beV=new A.Y("Novo cart\xe3o",null,null,null,null,null,null,null,null,null)
+B.beX=new A.Y("Reabrir fatura",null,B.ef,null,null,null,null,null,null,null)
+B.beY=new A.Y("Saldos das contas",null,B.Tk,null,null,null,null,null,null,null)
+B.beZ=new A.Y("Limpar",null,null,null,null,null,null,null,null,null)
 B.TB=new A.Y("Exportar CSV",null,null,null,null,null,null,null,null,null)
-B.beZ=new A.Y("Mesclar",null,null,null,null,null,null,null,null,null)
-B.bf_=new A.Y("Editar investimento",null,null,null,null,null,null,null,null,null)
-B.bf0=new A.Y("Confirmar recebimento",null,null,null,null,null,null,null,null,null)
-B.bf2=new A.Y("Usar dados deste aparelho",null,null,null,null,null,null,null,null,null)
-B.bf3=new A.Y("Ver movimenta\xe7\xf5es por investimento",null,null,null,null,null,null,null,null,null)
-B.bf4=new A.Y("Voltar aos dados anteriores?",null,null,null,null,null,null,null,null,null)
-B.bf5=new A.Y("Exportar backup do aplicativo",null,null,null,null,null,null,null,null,null)
-B.bf7=new A.Y("Registrar dividendo recebido",null,B.pJ,null,null,null,null,null,null,null)
-B.bf8=new A.Y("Valores registrados por aplica\xe7\xe3o e pelas movimenta\xe7\xf5es. N\xe3o representa rentabilidade de mercado.",null,B.eL,null,null,null,null,null,null,null)
+B.bf_=new A.Y("Mesclar",null,null,null,null,null,null,null,null,null)
+B.bf0=new A.Y("Editar investimento",null,null,null,null,null,null,null,null,null)
+B.bf1=new A.Y("Confirmar recebimento",null,null,null,null,null,null,null,null,null)
+B.bf3=new A.Y("Usar dados deste aparelho",null,null,null,null,null,null,null,null,null)
+B.bf4=new A.Y("Ver movimenta\xe7\xf5es por investimento",null,null,null,null,null,null,null,null,null)
+B.bf5=new A.Y("Voltar aos dados anteriores?",null,null,null,null,null,null,null,null,null)
+B.bf6=new A.Y("Exportar backup do aplicativo",null,null,null,null,null,null,null,null,null)
+B.bf8=new A.Y("Registrar dividendo recebido",null,B.pJ,null,null,null,null,null,null,null)
+B.bf9=new A.Y("Valores registrados por aplica\xe7\xe3o e pelas movimenta\xe7\xf5es. N\xe3o representa rentabilidade de mercado.",null,B.eL,null,null,null,null,null,null,null)
 B.TC=new A.Y("Data final",null,null,null,null,null,null,null,null,null)
-B.bfa=new A.Y("In\xedcio",null,null,null,null,null,null,null,null,null)
-B.bfd=new A.Y("Usar os dados do backup recupera esta c\xf3pia completa no aparelho. Mesclar tamb\xe9m mant\xe9m cadastros que j\xe1 estavam aqui. A nuvem ser\xe1 alterada somente ap\xf3s sua confer\xeancia e envio.",null,null,null,null,null,null,null,null,null)
-B.bfh=new A.Y("Aprovar",null,null,null,null,null,null,null,null,null)
-B.bfi=new A.Y("Exportar PDF",null,null,null,null,null,null,null,null,null)
-B.bfj=new A.Y("Nenhuma movimenta\xe7\xe3o registrada neste per\xedodo.",null,null,null,null,null,null,null,null,null)
-B.bfk=new A.Y("N\xe3o foi poss\xedvel conectar ao servi\xe7o de login. Confira a internet e recarregue esta p\xe1gina. O backup da nuvem exige uma conex\xe3o autenticada.",null,null,null,null,null,null,null,null,null)
-B.bfl=new A.Y("Exportar para a Play Store",null,null,null,null,null,null,null,null,null)
-B.bfn=new A.Y("Confirmar inclus\xe3o na Play",null,null,null,null,null,null,null,null,null)
-B.bfq=new A.Y("Excluir investimento",null,null,null,null,null,null,null,null,null)
-B.bfr=new A.Y("Adicione um c\xf3digo de negocia\xe7\xe3o para acompanhar, mesmo fora da carteira.",null,B.eL,null,null,null,null,null,null,null)
-B.bfs=new A.Y("Conferir backup",null,null,null,null,null,null,null,null,null)
-B.bfv=new A.Y("Backup da nuvem",null,null,null,null,null,null,null,null,null)
-B.bfw=new A.Y("Excluir lan\xe7amento",null,B.ef,null,null,null,null,null,null,null)
-B.bfx=new A.Y("Mais tarde",null,null,null,null,null,null,null,null,null)
-B.bfy=new A.Y("Categorias",null,B.dU,null,null,null,null,null,null,null)
-B.bfA=new A.Y("Acompanhar ativo",null,null,null,null,null,null,null,null,null)
-B.bfB=new A.Y("Atualizar status",null,null,null,null,null,null,null,null,null)
-B.bfC=new A.Y("Revisar e enviar \xe0 nuvem",null,null,null,null,null,null,null,null,null)
-B.bfD=new A.Y("Trocar de conta",null,null,null,null,null,null,null,null,null)
-B.bfF=new A.Y("Remover alerta",null,null,null,null,null,null,null,null,null)
-B.bfI=new A.Y("Recusar",null,null,null,null,null,null,null,null,null)
-B.bfJ=new A.Y("Salvar alerta",null,null,null,null,null,null,null,null,null)
-B.bfK=new A.Y("Cart\xf5es pelo vencimento; transfer\xeancias fora dos totais.",null,B.lB,null,null,null,null,null,null,null)
-B.bfL=new A.Y("Os cadastros voltar\xe3o ao estado que tinham antes da \xfaltima restaura\xe7\xe3o.",null,null,null,null,null,null,null,null,null)
+B.bfb=new A.Y("In\xedcio",null,null,null,null,null,null,null,null,null)
+B.bfe=new A.Y("Usar os dados do backup recupera esta c\xf3pia completa no aparelho. Mesclar tamb\xe9m mant\xe9m cadastros que j\xe1 estavam aqui. A nuvem ser\xe1 alterada somente ap\xf3s sua confer\xeancia e envio.",null,null,null,null,null,null,null,null,null)
+B.bfi=new A.Y("Aprovar",null,null,null,null,null,null,null,null,null)
+B.bfj=new A.Y("Exportar PDF",null,null,null,null,null,null,null,null,null)
+B.bfk=new A.Y("Nenhuma movimenta\xe7\xe3o registrada neste per\xedodo.",null,null,null,null,null,null,null,null,null)
+B.bfl=new A.Y("N\xe3o foi poss\xedvel conectar ao servi\xe7o de login. Confira a internet e recarregue esta p\xe1gina. O backup da nuvem exige uma conex\xe3o autenticada.",null,null,null,null,null,null,null,null,null)
+B.bfm=new A.Y("Exportar para a Play Store",null,null,null,null,null,null,null,null,null)
+B.bfo=new A.Y("Confirmar inclus\xe3o na Play",null,null,null,null,null,null,null,null,null)
+B.bfr=new A.Y("Excluir investimento",null,null,null,null,null,null,null,null,null)
+B.bfs=new A.Y("Adicione um c\xf3digo de negocia\xe7\xe3o para acompanhar, mesmo fora da carteira.",null,B.eL,null,null,null,null,null,null,null)
+B.bft=new A.Y("Conferir backup",null,null,null,null,null,null,null,null,null)
+B.bfw=new A.Y("Backup da nuvem",null,null,null,null,null,null,null,null,null)
+B.bfx=new A.Y("Excluir lan\xe7amento",null,B.ef,null,null,null,null,null,null,null)
+B.bfy=new A.Y("Mais tarde",null,null,null,null,null,null,null,null,null)
+B.bfz=new A.Y("Categorias",null,B.dU,null,null,null,null,null,null,null)
+B.bfB=new A.Y("Acompanhar ativo",null,null,null,null,null,null,null,null,null)
+B.bfC=new A.Y("Atualizar status",null,null,null,null,null,null,null,null,null)
+B.bfD=new A.Y("Revisar e enviar \xe0 nuvem",null,null,null,null,null,null,null,null,null)
+B.bfE=new A.Y("Trocar de conta",null,null,null,null,null,null,null,null,null)
+B.bfG=new A.Y("Remover alerta",null,null,null,null,null,null,null,null,null)
+B.bfJ=new A.Y("Recusar",null,null,null,null,null,null,null,null,null)
+B.bfK=new A.Y("Salvar alerta",null,null,null,null,null,null,null,null,null)
+B.bfL=new A.Y("Cart\xf5es pelo vencimento; transfer\xeancias fora dos totais.",null,B.lB,null,null,null,null,null,null,null)
+B.bfM=new A.Y("Os cadastros voltar\xe3o ao estado que tinham antes da \xfaltima restaura\xe7\xe3o.",null,null,null,null,null,null,null,null,null)
 B.TD=new A.Y("Nenhum investimento cadastrado.",null,null,null,null,null,null,null,null,null)
-B.bfN=new A.Y("A c\xf3pia escolhida foi conferida no servidor.",null,null,null,null,null,null,null,null,null)
-B.bfO=new A.Y("Solicitar acesso",null,null,null,null,null,null,null,null,null)
-B.bfP=new A.Y("Excluir meta",null,null,null,null,null,null,null,null,null)
-B.bfQ=new A.Y("Metas e aplica\xe7\xf5es",null,B.dU,null,null,null,null,null,null,null)
-B.bfS=new A.Y("Conferi as diferen\xe7as e quero usar a c\xf3pia que escolher abaixo.",null,null,null,null,null,null,null,null,null)
-B.bfU=new A.Y("A biometria desbloqueia o app no celular. No navegador, use Google. Os dados que existem apenas no celular precisam ser recuperados do pr\xf3prio aparelho.",null,null,null,null,null,null,null,null,null)
-B.bfV=new A.Y("Transfer\xeancia recorrente",null,null,null,null,null,null,null,null,null)
-B.bfW=new A.Y("Excluir conta",null,null,null,null,null,null,null,null,null)
+B.bfO=new A.Y("A c\xf3pia escolhida foi conferida no servidor.",null,null,null,null,null,null,null,null,null)
+B.bfP=new A.Y("Solicitar acesso",null,null,null,null,null,null,null,null,null)
+B.bfQ=new A.Y("Excluir meta",null,null,null,null,null,null,null,null,null)
+B.bfR=new A.Y("Metas e aplica\xe7\xf5es",null,B.dU,null,null,null,null,null,null,null)
+B.bfT=new A.Y("Conferi as diferen\xe7as e quero usar a c\xf3pia que escolher abaixo.",null,null,null,null,null,null,null,null,null)
+B.bfV=new A.Y("A biometria desbloqueia o app no celular. No navegador, use Google. Os dados que existem apenas no celular precisam ser recuperados do pr\xf3prio aparelho.",null,null,null,null,null,null,null,null,null)
+B.bfW=new A.Y("Transfer\xeancia recorrente",null,null,null,null,null,null,null,null,null)
+B.bfX=new A.Y("Excluir conta",null,null,null,null,null,null,null,null,null)
 B.TE=new A.Y("Aplicar",null,null,null,null,null,null,null,null,null)
-B.bfY=new A.Y("Criar recebimento da outra parte",null,null,null,null,null,null,null,null,null)
-B.bfZ=new A.Y("Sincronizar dados deste aparelho com a nuvem",null,null,null,null,null,null,null,null,null)
-B.bg_=new A.Y("Gasto parcelado",null,null,null,null,null,null,null,null,null)
+B.bfZ=new A.Y("Criar recebimento da outra parte",null,null,null,null,null,null,null,null,null)
+B.bg_=new A.Y("Sincronizar dados deste aparelho com a nuvem",null,null,null,null,null,null,null,null,null)
+B.bg0=new A.Y("Gasto parcelado",null,null,null,null,null,null,null,null,null)
 B.TF=new A.Y("Nenhuma meta cadastrada.",null,null,null,null,null,null,null,null,null)
-B.bg3=new A.Y("Usar os dados do backup",null,null,null,null,null,null,null,null,null)
-B.bg4=new A.Y("Deseja excluir este aporte? Essa a\xe7\xe3o n\xe3o pode ser desfeita.",null,null,null,null,null,null,null,null,null)
-B.bg5=new A.Y("Marcar todas como lidas",null,null,null,null,null,null,null,null,null)
-B.bg6=new A.Y("Repetir mensalmente",null,null,null,null,null,null,null,null,null)
-B.bg7=new A.Y("Data inicial",null,null,null,null,null,null,null,null,null)
-B.bg8=new A.Y("Diagn\xf3stico do app \xb7 1.2.9+2020",null,null,null,null,null,null,null,null,null)
+B.bg4=new A.Y("Usar os dados do backup",null,null,null,null,null,null,null,null,null)
+B.bg5=new A.Y("Deseja excluir este aporte? Essa a\xe7\xe3o n\xe3o pode ser desfeita.",null,null,null,null,null,null,null,null,null)
+B.bg6=new A.Y("Marcar todas como lidas",null,null,null,null,null,null,null,null,null)
+B.bg7=new A.Y("Repetir mensalmente",null,null,null,null,null,null,null,null,null)
+B.bg8=new A.Y("Data inicial",null,null,null,null,null,null,null,null,null)
 B.bga=new A.Y("Confirmar troca",null,null,null,null,null,null,null,null,null)
 B.bgb=new A.Y("J\xe1 existe um recebimento com este ativo, data e valor. Cadastrar outro?",null,null,null,null,null,null,null,null,null)
 B.bgc=new A.Y("Pagamento recorrente",null,null,null,null,null,null,null,null,null)
