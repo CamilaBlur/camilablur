@@ -1,8 +1,9 @@
+import {totpHints,validTotp} from './mfa-model.mjs';
 import {accessView, approvedCsv, PLAY_TEST_URL} from './access-model.mjs';
 const endpoint='https://blur-finance-quotes.camilablur.workers.dev/access';
 const el=id=>document.getElementById(id);
 let sdk, auth, generation=0, verificationUntil=0, automaticChecks=0, chooseGoogleAccount=false;
-const state={user:null,status:null,busy:true,error:'',notice:'',rows:[],cursor:null};
+const state={user:null,status:null,busy:true,error:'',notice:'',rows:[],cursor:null,challenge:null};
 function bounded(promise, milliseconds, code='service_unavailable') {
   let timer;const timeout=new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(code)),milliseconds);});
   return Promise.race([promise,timeout]).finally(()=>clearTimeout(timer));
@@ -38,6 +39,8 @@ function errorText(error) {
   if(messages[error.message])return messages[error.message];
   if(error.code==='auth/popup-closed-by-user'||error.code==='auth/cancelled-popup-request')return 'Login cancelado. Você pode tentar novamente.';
   if(error.code==='auth/popup-blocked')return 'O navegador bloqueou a janela de login. Abra este link no Chrome e permita o login com Google.';
+  if(['auth/invalid-verification-code','auth/invalid-totp-code'].includes(error.code))return 'Código inválido ou expirado. Informe o código atual do autenticador.';
+  if(['auth/invalid-multi-factor-session','auth/session-expired'].includes(error.code))return 'A confirmação expirou. Cancele e entre novamente.';
   if(error.code==='auth/too-many-requests')return 'Muitos envios em sequência. Aguarde antes de pedir outra confirmação.';
   if(error.code==='auth/unauthorized-domain')return 'Este endereço ainda não foi autorizado para o login. Entre em contato com o suporte.';
   if(error.message==='invalid_email')return 'Há um e-mail inválido na lista. Confira os cadastros antes de exportar.';
@@ -62,8 +65,36 @@ async function refresh() {
 async function googleLogin() {
   await run(async()=>{
     const provider=new sdk.GoogleAuthProvider();if(chooseGoogleAccount)provider.setCustomParameters({prompt:'select_account'});
-    await bounded(sdk.signInWithPopup(auth,provider),90000,'login_timeout');
+    try { await bounded(sdk.signInWithPopup(auth,provider),90000,'login_timeout'); }
+    catch(error) {
+      if(error.code!=='auth/multi-factor-auth-required')throw error;
+      state.challenge=sdk.getMultiFactorResolver(auth,error);
+    }
   });
+}
+async function confirmSecondFactor(uid,code) {
+  if(!validTotp(code)){state.error='Informe os 6 números do autenticador.';render();return;}
+  const challenge=state.challenge;
+  if(!challenge||!totpHints(challenge.hints).some(h=>h.uid===uid)){state.error='Entre novamente para confirmar o acesso.';render();return;}
+  await run(async()=>{
+    const assertion=sdk.TotpMultiFactorGenerator.assertionForSignIn(uid,code);
+    await bounded(challenge.resolveSignIn(assertion),20000);
+    if(state.challenge===challenge)state.challenge=null;
+  });
+}
+function renderSecondFactor(actions) {
+  const factors=totpHints(state.challenge.hints);
+  if(!factors.length){const note=document.createElement('p');note.textContent='Este método de confirmação precisa ser usado pelo aplicativo. Abra a versão web do Blur.';actions.append(note,link('Abrir Blur','../',true));}
+  else {
+    let selection;
+    if(factors.length>1){selection=document.createElement('select');selection.setAttribute('aria-label','Autenticador');for(const f of factors){const option=document.createElement('option');option.value=f.uid;option.textContent=f.name;selection.append(option);}selection.disabled=state.busy;actions.append(selection);}
+    const code=document.createElement('input');code.type='text';code.inputMode='numeric';code.autocomplete='one-time-code';code.maxLength=6;code.setAttribute('aria-label','Código de 6 números');code.placeholder='Código de 6 números';code.disabled=state.busy;
+    code.addEventListener('input',()=>{code.value=code.value.replace(/[^0-9]/g,'').slice(0,6);});
+    const submit=()=>confirmSecondFactor(selection?selection.value:factors[0].uid,code.value);
+    code.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();submit();}});
+    actions.append(code,button('Confirmar acesso',submit,{primary:true}));
+  }
+  actions.append(button('Cancelar confirmação',()=>{state.challenge=null;state.error='';render();}));
 }
 async function changeAccount() {
   chooseGoogleAccount=true;await run(async()=>{await sdk.signOut(auth);});
@@ -82,14 +113,15 @@ async function sendVerification() {
   });
 }
 function render() {
-  let view=accessView(state.user,state.status);if(!sdk)view='loading';
-  const titles={sign_in:'Seu acesso começa aqui',loading:'Conferindo seu acesso',verify_email:'Confirme sua conta',request:'Solicite seu acesso',pending:'Pedido enviado',denied:'Pedido não aprovado',approved_waiting_play:'Acesso ao Blur aprovado',ready:'Tudo pronto para começar'};
-  const copies={sign_in:'Entre com Google para solicitar acesso ou conferir sua aprovação.',loading:'Aguarde enquanto consultamos sua conta.',verify_email:'Sua conta ainda está sem confirmação. Você pode entrar novamente com Google ou confirmar pelo e-mail.',request:'Envie seu pedido para a CamilaBlur analisar.',pending:'Seu pedido está aguardando a aprovação da CamilaBlur.',denied:'A CamilaBlur não aprovou este pedido. Você pode falar com o suporte.',approved_waiting_play:'Você já pode usar a versão web. A liberação na Google Play ainda está sendo concluída.',ready:'Seu acesso está aprovado. Participe do teste na Google Play para instalar o aplicativo.'};
+  let view=state.challenge?'second_factor':accessView(state.user,state.status);if(!sdk)view='loading';
+  const titles={second_factor:'Confirme seu acesso',sign_in:'Seu acesso começa aqui',loading:'Conferindo seu acesso',verify_email:'Confirme sua conta',request:'Solicite seu acesso',pending:'Pedido enviado',denied:'Pedido não aprovado',approved_waiting_play:'Acesso ao Blur aprovado',ready:'Tudo pronto para começar'};
+  const copies={second_factor:'Abra seu aplicativo autenticador e informe o código do Blur Finance.',sign_in:'Entre com Google para solicitar acesso ou conferir sua aprovação.',loading:'Aguarde enquanto consultamos sua conta.',verify_email:'Sua conta ainda está sem confirmação. Você pode entrar novamente com Google ou confirmar pelo e-mail.',request:'Envie seu pedido para a CamilaBlur analisar.',pending:'Seu pedido está aguardando a aprovação da CamilaBlur.',denied:'A CamilaBlur não aprovou este pedido. Você pode falar com o suporte.',approved_waiting_play:'Você já pode usar a versão web. A liberação na Google Play ainda está sendo concluída.',ready:'Seu acesso está aprovado. Participe do teste na Google Play para instalar o aplicativo.'};
   el('status-title').textContent=titles[view];el('status-copy').textContent=copies[view];
   el('badge').textContent=state.busy?'Conferindo…':view==='ready'?'Acesso liberado':'Convite para o teste';
   el('identity').hidden=!state.user;el('identity').replaceChildren();
   if(state.user){const name=document.createElement('small');name.textContent=state.user.displayName||'Conta conectada';el('identity').append(name,document.createTextNode(state.user.email||''));}
   const actions=el('actions');actions.replaceChildren();
+  if(view==='second_factor')renderSecondFactor(actions);
   if(view==='sign_in')actions.append(button('Entrar com Google',googleLogin,{primary:true}));
   if(view==='request')actions.append(button('Solicitar acesso',requestAccess,{primary:true}));
   if(view==='verify_email'){
@@ -165,5 +197,5 @@ try{
   sdk=await bounded(import('https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js'),20000);
   const app=appSdk.initializeApp({apiKey:'AIzaSyCZd7_oYAOcGejJIj4FPz6n_t_x1yVk32g',authDomain:'blur-finance.firebaseapp.com',projectId:'blur-finance',appId:'1:522617410666:web:affaf428082e458dc6e613'});
   auth=sdk.getAuth(app);auth.languageCode='pt-BR';
-  sdk.onAuthStateChanged(auth,user=>{generation++;state.user=user;state.status=null;state.rows=[];state.error='';state.notice='';state.busy=false;render();if(user)void refresh();});
+  sdk.onAuthStateChanged(auth,user=>{generation++;state.user=user;state.challenge=null;state.status=null;state.rows=[];state.error='';state.notice='';state.busy=false;render();if(user)void refresh();});
 }catch{state.busy=false;state.error='Não foi possível carregar o login. Confira sua conexão e recarregue a página.';el('status-title').textContent='Acesso temporariamente indisponível';el('actions').replaceChildren(button('Recarregar página',()=>location.reload(),{disabled:false}));el('message').className='error';el('message').textContent=state.error;}
