@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d1024;
+  --surface: #191643;
+  --line: #4b3d87;
+  --text: #f5f3ff;
+  --muted: #cec9e8;
+  --link: #d5c4ff;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0, #2a2159 0%, transparent 53rem), var(--bg);
+  color: var(--text);
+  font: 1rem/1.65 "Century Gothic", "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--link); text-underline-offset: .2em; }
+a:hover { color: white; }
+a:focus-visible { outline: 2px solid #cfb9ff; outline-offset: 4px; border-radius: 2px; }
+.frame { width: min(100% - 2rem, 62rem); margin-inline: auto; }
+header { padding-block: 1.25rem; }
+.brand {
+  color: var(--text);
+  font-weight: 650;
+  text-decoration: none;
+}
+.brand span { font-weight: 400; }
+main {
+  margin-block: 1rem 0;
+  padding: clamp(1.25rem, 5vw, 4rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+}
+.date { color: var(--muted); font-size: .9rem; margin-block: 0 .5rem; }
+h1, h2 { line-height: 1.23; }
+h1 { margin: 0; font-size: clamp(2.05rem, 6vw, 3.6rem); letter-spacing: -.04em; }
+h2 { margin: 0 0 .8rem; font-size: clamp(1.25rem, 3.3vw, 1.5rem); }
+p { margin: .75rem 0; }
+ul { padding-inline-start: 1.4rem; }
+li + li { margin-top: .55rem; }
+.intro { font-size: 1.06rem; margin-block: 1.25rem; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.3rem;
+  padding-block: .85rem 1.15rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .96rem;
+}
+section { padding-top: 1.8rem; }
+.request {
+  margin-top: 1.8rem;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #211b4a;
+}
+.request a {
+  display: inline-block;
+  padding: .6rem .9rem;
+  background: #403079;
+  color: #fff;
+  border-radius: .6rem;
+  font-weight: 600;
+}
+footer {
+  padding-block: 1.4rem 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .5rem 1.2rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
