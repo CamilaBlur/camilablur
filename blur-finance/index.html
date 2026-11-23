@@ -17,6 +17,7 @@
   <base href="/blur-finance/">
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Blur Finance: contas, cartões, metas e investimentos sincronizados entre celular e navegador.">
   <meta name="theme-color" content="#191643">
@@ -32,21 +33,49 @@
 
   <title>Blur Finance</title>
   <link rel="manifest" href="manifest.json">
-</head>
-<body>
   <style>
     html, body {
+      margin: 0;
       background: #050816;
     }
+    body {
+      height: 100vh;
+      height: 100dvh;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      overflow: hidden;
+    }
+    #blur-finance-app {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+    }
+    .app-footer {
+      display: flex;
+      justify-content: center;
+      padding: 0.25rem 1rem max(0.25rem, env(safe-area-inset-bottom));
+      background: #101227;
+      border-top: 1px solid #3b316b;
+      font: 0.9rem/1.35 "Century Gothic", "Segoe UI", system-ui, sans-serif;
+    }
+    .app-footer a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      color: #d5c4ff;
+      text-underline-offset: 0.2em;
+    }
+    .app-footer a:focus-visible {
+      outline: 2px solid #d5c4ff;
+      outline-offset: 3px;
+    }
   </style>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="flutter_bootstrap.js" async></script>
+</head>
+<body>
+  <div id="blur-finance-app"></div>
+  <footer class="app-footer">
+    <a href="politica-de-privacidade/">Política de Privacidade</a>
+  </footer>
+  <script src="flutter_bootstrap.js?footer=20261123" defer></script>
 </body>
 </html>
